@@ -1,0 +1,133 @@
+:root {
+  --text-color: #fff;
+  --menu-color: #f08d8f;
+  --body-margin-small-dev: 8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 16px 32px;
+}
+
+/* navigation section */
+nav {
+  background-color: var(--menu-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.icon {
+  width: 30px;
+  height: 25px;
+  margin-left: auto;
+  display: none;
+}
+
+.icon-image {
+  width: 100%;
+  padding: 8px;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu-item {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 16px;
+  border: 2px solid var(--menu-color);
+}
+
+.menu-item:hover {
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+}
+
+/* hero-section */
+.hero-section {
+  background-image: url("https://images.unsplash.com/photo-1540503831458-3237544b2ce5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2882&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.hero-text {
+  color: var(--text-color);
+  position: absolute;
+  left: 32px;
+  bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.hero-title {
+  margin-top: 8px;
+}
+
+/* image section */
+.image-container {
+  width: 50vw;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* media queries */
+/* mobile devices, iPads and tablets (to 768px) */
+@media (max-width: 768px) {
+  .icon {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .hero-subtitle {
+    font-size: 18px;
+  }
+  .hero-title {
+    font-size: 24px;
+  }
+  .image-container {
+    width: calc(100vw - 2 * var(--body-margin-small-dev));
+  }
+  body {
+    margin: var(--body-margin-small-dev);
+  }
+  nav {
+    padding: 10px;
+  }
+}
+
+/* tv and extra large screens (1201px and more) */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
