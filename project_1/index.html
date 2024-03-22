@@ -12,6 +12,7 @@
     <!-- discord: bluskova -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Travel Assistant</title>
+    <link rel="icon" type="image/x-icon" href="icons/travel-favicon.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,12 +25,6 @@
     <!-- navigation section -->
     <nav class="navigation-section">
       <div class="content-container">
-        <div class="menu-icon-container">
-          <img
-            class="menu-icon-image"
-            src="icons/png-icons-white/hamburger-menu-white.png"
-          />
-        </div>
         <ul class="menu">
           <li>
             <a class="menu-item menu-item-first" href="#about-us">About Us</a>
@@ -41,16 +36,253 @@
             <a class="menu-item menu-item-last" href="#reviews">Reviews</a>
           </li>
         </ul>
+        <div class="menu-icon-container">
+          <img
+            class="menu-icon"
+            src="icons/png-icons-white/hamburger-menu-white.png"
+            alt="menu icon"
+          />
+        </div>
       </div>
     </nav>
 
     <!-- hero-section: introduction photo & title -->
-    <div class="hero-section">
+    <section class="hero-section">
       <div class="content-container">
-        <div class="hero-text">
+        <div class="hero-title-container">
           <h1 class="hero-title">Your Travel Assistant</h1>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- about us section -->
+    <section class="section-padding" id="about-us">
+      <div class="content-container">
+        <div class="wrapper">
+          <div class="text-container">
+            <h2 class="section-title">About Us</h2>
+            <p class="text">
+              Leigh McAdam is a Calgary-based writer, photographer and social
+              media enthusiast with over 48,000 followers. Her blog:
+              HikeBikeTravel is frequently cited as one of the top travel and
+              outdoor adventure blogs in Canada, and consistently receives over
+              135,000 monthly page views. She shares her enthusiasm for the
+              outdoors as a brand ambassador for Sporting Life, and has worked
+              on campaigns for Travel Alberta, Expedia and Flight Hub. Leigh is
+              the author of Discover Canada: 100 Inspiring Outdoor Adventures.
+              Currently, she is co-authoring: 125 Nature Hot Spots in Alberta
+              (spring 2018). A true adventurer, Leigh will try anything once,
+              except perhaps bungee jumping.
+            </p>
+          </div>
+          <div class="image-container">
+            <!-- <img
+            src="images/anneliese-phillips-uv4-vl3liKM-unsplash.jpg"
+            alt=""
+          /> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- what we do section -->
+    <section class="section-padding" id="what-we-do">
+      <div class="content-container">
+        <h2 class="section-title text-center">What We Do</h2>
+        <p class="text text-center">
+          Opportunities for challenging hikes and pleasant strolls are scattered
+          all over this planet; you just need to know where to find them. We do.
+          Kilimanjaro, Everest Base Camp, Patagonia, and the Inca Trail are out
+          there, waiting for you to walk all over them. We’re proud of our
+          record of successful ascents (over 92% of our travellers make it to
+          the top of Kili, depending on the route), but it’s our CEOs and local
+          guides that make the journey itself as memorable as the summit. And if
+          you’re not into big climbs, don’t sweat it; we’ve got loads of
+          lower-impact walks and iconic treks you’ll love, too.
+        </p>
+        <div class="what-we-do-icons">
+          <div class="icon-container">
+            <div class="icon-image">
+              <img
+                src="icons/png-icons-white/hiking-white.png"
+                alt="hiking icon"
+              />
+            </div>
+            <div class="icon-title">Hiking</div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-image">
+              <img
+                src="icons/png-icons-white/cycle-white.png"
+                alt="cycling icon"
+              />
+            </div>
+            <div class="icon-title">Cycling</div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-image">
+              <img
+                src="icons/png-icons-white/water-white.png"
+                alt="surfing icon"
+              />
+            </div>
+            <div class="icon-title">Surfing</div>
+          </div>
+          <div class="icon-container">
+            <div class="icon-image">
+              <img src="icons/png-icons-white/car-white.png" alt="car icon" />
+            </div>
+            <div class="icon-title">Car&nbsp;trips</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our trips - photo gallery -->
+    <section class="section-padding" id="our-trips">
+      <div class="content-container">
+        <div class="photo-gallery">
+          <div class="gallery-item photo-1"></div>
+          <div class="gallery-item photo-2"></div>
+          <div class="gallery-item photo-3"></div>
+          <div class="gallery-item photo-4"></div>
+          <div class="gallery-item gallery-text">Our Trips</div>
+          <div class="gallery-item photo-5"></div>
+          <div class="gallery-item photo-6"></div>
+          <div class="gallery-item photo-7"></div>
+          <div class="gallery-item photo-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- where to go section -->
+    <section class="section-padding" id="where-to-go">
+      <div class="content-container">
+        <div class="wrapper">
+          <div class="wrapper-item1">
+            <h2 class="section-title">Where do you want to go?</h2>
+          </div>
+          <div class="wrapper-item2">
+            <p class="text">
+              You’ll find 21 detailed adventure guides, over a hundred practical
+              travel tips, book reviews on anything outdoors related, packing
+              lists on a range of outdoor activities including kayaking,
+              backpacking and camping as well as honest hotel and B&B reviews.
+            </p>
+            <p class="text">Contact us and we will help you!</p>
+            <div class="contact-button-container">
+              <span class="contact-button">Contact Us</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- reviews section  -->
+    <section class="section-padding" id="reviews">
+      <div class="content-container">
+        <div class="cards">
+          <div class="review-card">
+            <h2 class="section-title">Reviews</h2>
+            <p class="text text-center">
+              Our amazing clients are the reason we exist, and their reactions
+              to our customized travel experiences and personalized service keep
+              us smiling all day long. Here is just a sampling of what they’ve
+              said:
+            </p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="review-card">
+            <img
+              class="profile-photo"
+              src="images/kalen-emsley-kGSapVfg8Kw-unsplash.jpg"
+              alt="profile picture"
+            />
+            <p class="text text-center">
+              She has booked two major European trips for us in the past year
+              and every aspect has met, and in most cases exceeded, our
+              expectations. Best prices, best hotels, best itineraries, and best
+              cruises, she does it all. But the most important thing is she
+              remembers the little things that we would do if we were making the
+              plans ourselves.
+            </p>
+            <div class="profile-name">Bertie Norton</div>
+          </div>
+
+          <div class="review-card">
+            <img
+              class="profile-photo"
+              src="images/jeffrey-keenan-pUhxoSapPFA-unsplash.jpg"
+              alt="profile picture"
+            />
+            <p class="text text-center">
+              Leigh McAdam has been making my travel arrangements for about 20
+              years and there is no one else I would trust to arrange my trips
+              and tours. I've also had great fun on a few of the group trips she
+              has arranged - Peru & Machu Picchu and a 10-day cruise out of
+              Venice and diving. It's always an eclectic group of well traveled,
+              interesting people.
+            </p>
+            <div class="profile-name">Frank Kinney</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery of big photos -->
+    <section class="gallery-big-container">
+      <div class="gallery-big">
+        <div class="gallery-big-item">
+          <img
+            src="images/alexey-fedenkov-BaCZYH9RLmQ-unsplash.jpg"
+            alt="photo of the sea"
+          />
+        </div>
+        <div class="gallery-big-item">
+          <img
+            src="images/omer-salom-LoijtQXXNhs-unsplash.jpg"
+            alt="photo of the rock"
+          />
+        </div>
+        <div class="gallery-big-item">
+          <img
+            src="images/vincentiu-solomon-7MH4ped6_Mo-unsplash.jpg"
+            alt="photo of a mountain hut"
+          />
+        </div>
+        <div class="gallery-big-item">
+          <img
+            src="images/daniel-tseng-73lmMKhi2U8-unsplash.jpg"
+            alt="photo of the forest"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer: mail contact and copyright -->
+    <footer>
+      <div class="content-container">
+        <!-- <div class="footer-content-container"> -->
+        <div class="footer-contact-container">
+          <a
+            class="footer-contact"
+            href="mailto:YourTravelAssistant%40gmail.com?subject=Mail from a webpage"
+            >Contact</a
+          >
+        </div>
+        <div class="footer-copyright-container">
+          <p>
+            &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            - Your Travel Assistant. All Rights Reserved.
+          </p>
+        </div>
+        <!-- </div> -->
+      </div>
+    </footer>
   </body>
 </html>

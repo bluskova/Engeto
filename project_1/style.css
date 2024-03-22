@@ -8,28 +8,57 @@
   --a-col: #efa69d;
   --a-hov-col: #e9877b;
   --border-radius: 5px;
-  --breakpoint: 768px;
+  /* --breakpoint: 768px; */
 }
 
+/* common properties */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
   font-family: "Roboto", sans-serif;
 }
 
+.section-title {
+  font-size: 32px;
+  padding-bottom: 15px;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 1.2;
+}
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 /* all content is left and right aligned, margins 15% */
 .content-container {
   height: 100%;
   width: 70%;
-  margin: auto;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-
   border: 3px solid green;
+}
+@media (max-width: 768px) {
+  .content-container {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 /* navigation section */
@@ -48,6 +77,7 @@ body {
   text-decoration: none;
   color: var(--text-col);
   font-weight: bold;
+  font-size: 18px;
   background-color: var(--bg-col1);
   padding: 10px;
 }
@@ -64,18 +94,28 @@ body {
 }
 
 .menu-icon-container {
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   margin-left: auto;
   display: none;
 }
 
-.menu-icon-image {
+.menu-icon {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .menu-icon-container {
+    display: block;
+  }
+  .menu {
+    display: none;
+  }
 }
 
 /* hero-section */
 .hero-section {
+  background-color: var(--bg-col1); /* in case the image is not loaded */
   background-image: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
   background-size: cover;
   background-position: center;
@@ -83,7 +123,7 @@ body {
   height: 750px;
 }
 
-.hero-text {
+.hero-title-container {
   position: absolute;
   right: 0;
   bottom: 150px;
@@ -96,5 +136,281 @@ body {
   text-align: right;
   text-transform: capitalize;
   color: var(--text-col);
+  font-weight: 600;
+}
+
+/* about us section */
+#about-us {
+  background-color: var(--bg-col4);
+  color: var(--text-col-inverse);
+}
+.wrapper {
+  display: flex;
+  flex-direction: raw;
+  align-items: top;
+  gap: 20px;
+}
+
+.text-container {
+  width: calc(50% - 10px);
+  border: 2px solid pink;
+}
+.image-container {
+  background-image: url("images/anneliese-phillips-uv4-vl3liKM-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  /* width: 500px;
+  height: 500px; */
+  width: calc(50% - 10px);
+  height: 300px;
+  border: 2px solid pink;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .text-container {
+    width: 100%;
+  }
+  .image-container {
+    width: 100%;
+  }
+}
+
+/* what we do section */
+#what-we-do {
+  background-color: var(--bg-col1);
+  color: var(--text-col);
+}
+
+.what-we-do-icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .what-we-do-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.icon-container {
+  max-width: 75px;
+  /* flex-basis: 50px; */
+  flex-grow: 1;
+}
+.icon-image {
+  width: 100%;
+}
+.icon-image img {
+  width: 100%;
+}
+.icon-title {
+  font-size: 20px;
   font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* our trips - photo gallery */
+#our-trips {
+  background-color: var(--text-col);
+  color: var(--text-col-inverse);
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  gap: 0px;
+}
+.gallery-item {
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  flex-shrink: 1;
+  /* width: calc(100% / 3 - 40px); */
+  width: calc(100% / 3);
+}
+.gallery-text {
+  color: var(--text-col-inverse);
+  background-color: var(--bg-col4);
+  font-size: 20px;
+  font-weight: bold;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .photo-gallery {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .gallery-item {
+    height: 200px;
+    width: 100%;
+  }
+}
+
+.photo-1 {
+  background-image: url("images/simon-english-48nerZQCHgo-unsplash.jpg");
+}
+.photo-2 {
+  background: url("images/james-wheeler-ZOA-cqKuJAA-unsplash.jpg");
+}
+.photo-3 {
+  background-image: url("images/daniel-tseng-73lmMKhi2U8-unsplash.jpg");
+}
+.photo-4 {
+  background-image: url("images/holly-mandarich-UVyOfX3v0Ls-unsplash.jpg");
+}
+.photo-5 {
+  background-image: url("images/patrick-szylar-45bM3XGqnDE-unsplash.jpg");
+}
+.photo-6 {
+  background-image: url("images/chung-yee-tsang-wqxCKM0R6R8-unsplash.jpg");
+}
+.photo-7 {
+  background-image: url("images/julian-bialowas-ilkTnuMunP8-unsplash.jpg");
+}
+.photo-8 {
+  background-image: url("images/matej-drha-rbDzMcJsBkY-unsplash.jpg");
+}
+
+/* where to go section */
+#where-to-go {
+  background-color: var(--bg-col2);
+  color: var(--text-col);
+}
+
+.wrapper-item1 {
+  width: 30%;
+}
+.wrapper-item2 {
+  width: 70%;
+}
+
+@media (max-width: 768px) {
+  .wrapper-item1 {
+    width: 100%;
+  }
+  .wrapper-item2 {
+    width: 100%;
+  }
+}
+.wrapper-item2 .text {
+  margin-bottom: 20px;
+}
+
+.contact-button-container {
+}
+.contact-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--text-col-inverse);
+  background-color: var(--bg-col4);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  display: inline-block;
+  margin: 20px auto 0 0;
+}
+
+/* reviews section */
+#reviews {
+  background-color: var(--bg-col4);
+  color: var(--text-col-inverse);
+}
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: 20px; */
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.review-card {
+  max-width: 300px;
+  text-align: center;
+  margin: 20px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px;
+}
+
+.profile-name {
+  font-weight: bold;
+  margin: 20px;
+}
+
+/* gallery of big photos */
+.gallery-big-container {
+  background-color: var(--bg-col4);
+}
+.gallery-big {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1600px; /* upper limit for width of the gallery*/
+  margin: 0 auto;
+}
+.gallery-big-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  box-sizing: border-box;
+}
+.gallery-big-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-big-item {
+    flex-basis: 100%;
+  }
+}
+
+/* footer section */
+footer {
+  background-color: var(--bg-col1);
+  color: var(--text-col);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.footer-contact-container {
+  margin: 15px;
+}
+.footer-contact {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--a-col);
+  padding: 10px;
+}
+.footer-contact:hover {
+  color: var(--a-hov-col);
+}
+.footer-copyright-container {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 15px;
 }
