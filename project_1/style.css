@@ -1,10 +1,10 @@
 :root {
-  --text-col: #fff;
-  --text-col-inverse: #000;
-  --bg-col1: #33292a;
-  --bg-col2: #644b4f;
-  --bg-col3: #333333;
-  --bg-col4: #f2f2f2;
+  --text-col-light: #fff;
+  --text-col-dark: #000;
+  --bg-col-light: #f2f2f2;
+  --bg-col-dark: #644b4f;
+  --bg-col-darker: #33292a;
+  --bg-col-nav: #333333;
   --a-col: #efa69d;
   --a-hov-col: #e9877b;
   --border-radius: 5px;
@@ -63,7 +63,7 @@ body {
 
 /* navigation section */
 .navigation-section {
-  background-color: var(--bg-col1);
+  background-color: var(--bg-col-nav);
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -75,10 +75,10 @@ body {
 }
 .menu-item {
   text-decoration: none;
-  color: var(--text-col);
+  background-color: var(--bg-col-nav);
+  color: var(--text-col-light);
   font-weight: bold;
   font-size: 18px;
-  background-color: var(--bg-col1);
   padding: 10px;
 }
 
@@ -115,7 +115,7 @@ body {
 
 /* hero-section */
 .hero-section {
-  background-color: var(--bg-col1); /* in case the image is not loaded */
+  background-color: var(--bg-col-darker); /* in case the image is not loaded */
   background-image: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
   background-size: cover;
   background-position: center;
@@ -127,22 +127,30 @@ body {
   position: absolute;
   right: 0;
   bottom: 150px;
-  font-size: 32px;
-  line-height: 1.2;
+  /* font-size: 32px;
+  line-height: 1.2; */
 }
 
 .hero-title {
+  color: var(--text-col-light);
+  font-size: 64px;
+  font-weight: 600;
   max-width: min-content; /* each word on a new line */
   text-align: right;
   text-transform: capitalize;
-  color: var(--text-col);
-  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+  }
 }
 
 /* about us section */
 #about-us {
-  background-color: var(--bg-col4);
-  color: var(--text-col-inverse);
+  background-color: var(--bg-col-light);
+  color: var(--text-col-dark);
 }
 .wrapper {
   display: flex;
@@ -180,8 +188,8 @@ body {
 
 /* what we do section */
 #what-we-do {
-  background-color: var(--bg-col1);
-  color: var(--text-col);
+  background-color: var(--bg-col-darker);
+  color: var(--text-col-light);
 }
 
 .what-we-do-icons {
@@ -217,17 +225,17 @@ body {
 
 /* our trips - photo gallery */
 #our-trips {
-  background-color: var(--text-col);
-  color: var(--text-col-inverse);
+  background-color: var(--text-col-light);
+  color: var(--text-col-dark);
 }
 
-.photo-gallery {
+.gallery-small-photo {
   display: flex;
   flex-wrap: wrap;
   /* gap: 20px; */
   gap: 0px;
 }
-.gallery-item {
+.gallery-small-item {
   background-position: center;
   background-size: cover;
   height: 300px;
@@ -236,8 +244,8 @@ body {
   width: calc(100% / 3);
 }
 .gallery-text {
-  color: var(--text-col-inverse);
-  background-color: var(--bg-col4);
+  color: var(--text-col-dark);
+  background-color: var(--bg-col-light);
   font-size: 20px;
   font-weight: bold;
   height: 300px;
@@ -247,12 +255,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .photo-gallery {
+  .gallery-small-photo {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
   }
-  .gallery-item {
+  .gallery-small-item {
     height: 200px;
     width: 100%;
   }
@@ -285,8 +293,8 @@ body {
 
 /* where to go section */
 #where-to-go {
-  background-color: var(--bg-col2);
-  color: var(--text-col);
+  background-color: var(--bg-col-dark);
+  color: var(--text-col-light);
 }
 
 .wrapper-item1 {
@@ -313,8 +321,8 @@ body {
 .contact-button {
   text-transform: uppercase;
   font-weight: bold;
-  color: var(--text-col-inverse);
-  background-color: var(--bg-col4);
+  color: var(--text-col-dark);
+  background-color: var(--bg-col-light);
   padding: 10px 20px;
   border-radius: var(--border-radius);
   display: inline-block;
@@ -323,8 +331,8 @@ body {
 
 /* reviews section */
 #reviews {
-  background-color: var(--bg-col4);
-  color: var(--text-col-inverse);
+  background-color: var(--bg-col-light);
+  color: var(--text-col-dark);
 }
 .cards {
   display: flex;
@@ -360,10 +368,10 @@ body {
 }
 
 /* gallery of big photos */
-.gallery-big-container {
-  background-color: var(--bg-col4);
+.gallery-big-photo-container {
+  background-color: var(--bg-col-light);
 }
-.gallery-big {
+.gallery-big-photo {
   display: flex;
   flex-wrap: wrap;
   max-width: 1600px; /* upper limit for width of the gallery*/
@@ -390,8 +398,7 @@ body {
 
 /* footer section */
 footer {
-  background-color: var(--bg-col1);
-  color: var(--text-col);
+  background-color: var(--bg-col-nav);
   text-align: center;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -400,17 +407,24 @@ footer {
 .footer-contact-container {
   margin: 15px;
 }
+
 .footer-contact {
-  font-size: 12px;
-  font-weight: bold;
   color: var(--a-col);
+  font-weight: bold;
+  font-size: 12px;
   padding: 10px;
 }
+
 .footer-contact:hover {
   color: var(--a-hov-col);
 }
+
 .footer-copyright-container {
-  font-size: 10px;
-  font-weight: bold;
   margin: 15px;
+}
+
+.footer-copyright-container {
+  color: var(--text-col-light);
+  font-weight: bold;
+  font-size: 10px;
 }
