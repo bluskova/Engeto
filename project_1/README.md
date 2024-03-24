@@ -1,5 +1,5 @@
-RESPONSIVNÍ WEBOVÁ STRÁNKA
+RESPONSIVE WEBSITE
 
-Úkolem je vytvoření jednoduché responzivní webové stránky podle grafického návrhu. Stránka se bude přizpůsobovat rozložením podle šířky displeje. Ukázky výsledného zobrazení: "Desktop - 1.png" a "iPhone 14 - 1.png".
+The task is to create a simple responsive website according to the graphic design. The page will adjust the layout according to the width of the display. Samples of the resulting display: "Desktop - 1.png" and "iPhone 14 - 1.png".
 
-Zadání na Figme: https://www.figma.com/file/I3CPHrJyWzUj8rrU08zcIp/Engeto-Projekt-1?node-id=6-279
+Entry on Figma: https://www.figma.com/file/I3CPHrJyWzUj8rrU08zcIp/Engeto-Projekt-1?node-id=6-279
