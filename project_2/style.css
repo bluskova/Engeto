@@ -1,0 +1,58 @@
+:root {
+  --text-col: white;
+  --bg-col: #15304c;
+}
+
+/* general properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--bg-col);
+  height: 70px;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 200px;
+  margin-left: 20px;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+nav {
+  margin-right: 30px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 20px;
+}
+nav li a {
+  text-decoration: none;
+  color: var(--text-col);
+}
+
+.menu-icon {
+  margin-right: 30px;
+  display: none;
+}
+
+.welcome {
+  background-image: url("images/background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vw - 70px);
+}
