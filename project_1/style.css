@@ -11,7 +11,10 @@
   --my-gap: 20px;
 }
 
-/* common properties */
+/*******************************************
+      common properties 
+*******************************************/
+
 * {
   margin: 0;
   padding: 0;
@@ -44,7 +47,7 @@ body {
   line-height: 1.2;
 }
 
-.text-center {
+.centered {
   text-align: center;
 }
 
@@ -54,18 +57,22 @@ body {
   width: 70%;
   margin: 0 auto;
   position: relative;
-  max-width: 1200px;
+  max-width: 1200px; /* max width for extra large device */
 }
 
 @media (max-width: 768px) {
   .content-container {
+    /* all content is left and right aligned, margins 20px */
     width: calc(100% - 40px);
     margin-left: 20px;
     margin-right: 20px;
   }
 }
 
-/* navigation section */
+/*******************************************
+      navigation section 
+*******************************************/
+
 .navigation-section {
   background-color: var(--bg-col-nav);
   padding-top: 15px;
@@ -119,7 +126,10 @@ body {
   }
 }
 
-/* hero-section */
+/*******************************************
+      hero-section 
+*******************************************/
+
 .hero-section {
   background-color: var(--bg-col-darker); /* in case the image is not loaded */
   background-image: url("images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
@@ -158,7 +168,10 @@ body {
   }
 }
 
-/* about us section */
+/*******************************************
+      about us section 
+*******************************************/
+
 #about-us {
   background-color: var(--bg-col-light);
   color: var(--text-col-dark);
@@ -172,13 +185,15 @@ body {
 }
 
 .wrap-50 {
-  width: calc(50% - 10px);
+  width: calc(50% - calc(var(--my-gap) / 2));
 }
+
 .wrap-30 {
-  width: calc(30% - 10px);
+  width: calc(30% - calc(var(--my-gap) / 2));
 }
+
 .wrap-70 {
-  width: calc(70% - 10px);
+  width: calc(70% - calc(var(--my-gap) / 2));
 }
 
 @media (max-width: 768px) {
@@ -207,7 +222,10 @@ body {
   }
 }
 
-/* what we do section */
+/*******************************************
+      what we do section 
+*******************************************/
+
 #what-we-do {
   background-color: var(--bg-col-darker);
   color: var(--text-col-light);
@@ -238,6 +256,7 @@ body {
 .icon-image img {
   width: 100%;
 }
+
 .icon-title {
   color: var(--text-col-light);
   font-size: 20px;
@@ -246,7 +265,10 @@ body {
   margin-top: 10px;
 }
 
-/* our trips - photo gallery */
+/*******************************************
+      our trips - photo gallery 
+*******************************************/
+
 #our-trips {
   background-color: var(--text-col-light);
   color: var(--text-col-dark);
@@ -262,7 +284,8 @@ body {
   height: 300px;
   flex-shrink: 1;
   flex-grow: 1;
-  width: calc((100% - 40px) / 3);
+  /* 3 pictures next to each other */
+  width: calc((100% - (2 * var(--my-gap))) / 3);
 }
 
 .gallery-text {
@@ -350,7 +373,10 @@ body {
   background-repeat: no-repeat;
 }
 
-/* where to go section */
+/*******************************************
+      where to go section 
+ *******************************************/
+
 #where-to-go {
   background-color: var(--bg-col-dark);
   color: var(--text-col-light);
@@ -358,9 +384,6 @@ body {
 
 #where-to-go .wrapper-box-2 .text {
   margin-bottom: 20px;
-}
-
-.contact-button-container {
 }
 
 .contact-button {
@@ -375,7 +398,10 @@ body {
   margin: 20px auto 0 0;
 }
 
-/* reviews section */
+/*******************************************
+      reviews section 
+*******************************************/
+
 #reviews {
   background-color: var(--bg-col-light);
   color: var(--text-col-dark);
@@ -383,21 +409,31 @@ body {
 
 .cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  gap: calc(4 * var(--my-gap));
 }
 
 @media (max-width: 768px) {
   .cards {
     flex-direction: column;
     align-items: center;
-    gap: 0;
+    gap: var(--my-gap);
   }
 }
 
 .review-card {
-  max-width: 300px;
-  text-align: center;
-  margin: 20px;
+  width: calc(50% - 2 * var(--my-gap));
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    width: 100%;
+  }
+}
+
+.title-card {
+  margin: auto;
+  padding-bottom: 40px;
 }
 
 .profile-photo {
@@ -413,7 +449,10 @@ body {
   margin: 20px;
 }
 
-/* gallery of big photos */
+/*******************************************
+      gallery of big photos 
+*******************************************/
+
 .gallery-big-photo-container {
   background-color: var(--bg-col-darker);
 }
@@ -445,10 +484,12 @@ body {
   }
 }
 
-/* footer section */
+/*******************************************
+      footer section 
+*******************************************/
+
 footer {
   background-color: var(--bg-col-nav);
-  text-align: center;
   padding-top: 15px;
   padding-bottom: 10px;
 }
