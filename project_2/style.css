@@ -54,5 +54,5 @@ nav li a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: calc(100vw - 70px);
+  min-height: calc(100vh - 70px);
 }
