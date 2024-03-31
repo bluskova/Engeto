@@ -300,6 +300,7 @@ body {
 }
 
 .gallery-small-item:hover {
+  transition: all 0.5s linear;
   transform: scale(1.1);
 }
 
