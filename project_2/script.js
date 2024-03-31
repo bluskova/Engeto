@@ -3,7 +3,7 @@ function replaceClass(element, oldClass, newClass) {
   element.classList.add(newClass);
 }
 
-const menuIcon = document.querySelector("header .menu-icon i");
+const menuIcon = document.querySelector("header .menu-icon-container i");
 const navigation = document.querySelector("header nav");
 
 let hiddenMenu = true;

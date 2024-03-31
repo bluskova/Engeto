@@ -18,9 +18,15 @@
     margin-bottom: 10px;
   }
 
-  .menu-icon {
+  .menu-icon-container {
     display: block;
     color: var(--text-col);
     font-size: 23px;
+  }
+}
+
+@media (min-width: 601px) {
+  nav {
+    display: block !important;
   }
 }

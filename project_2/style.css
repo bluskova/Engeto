@@ -44,7 +44,7 @@ nav li a {
   color: var(--text-col);
 }
 
-.menu-icon {
+.menu-icon-container {
   margin-right: 30px;
   display: none;
 }
