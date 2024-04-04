@@ -2,6 +2,7 @@
 const menuIcon = document.querySelector("header .menu-icon-container i");
 const navigation = document.querySelector("header nav");
 const navigationLinks = document.querySelectorAll("header nav li");
+const heroSection = document.querySelector(".hero-section");
 
 // function which replace the hamburger and cross icon
 function replaceClass(element, oldClass, newClass) {
@@ -40,7 +41,6 @@ const imageSources = [
   "img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg",
 ];
 
-const heroSection = document.querySelector(".hero-section");
 let index = 0;
 setInterval(function () {
   index = index % imageSources.length;
