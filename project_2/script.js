@@ -31,3 +31,19 @@ navigationLinks.forEach((navLink) =>
     hiddenNav = true;
   })
 );
+
+// change hero image every 3 sec
+const imageSources = [
+  "img/hero-img/chaos-soccer-gear-Cjfl8r_eYxY-unsplash.jpg",
+  "img/hero-img/omar-ram-kHhLJMRpRDI-unsplash.jpg",
+  "img/hero-img/vikram-tkv-JO19K0HDDXI-unsplash.jpg",
+  "img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg",
+];
+
+const heroSection = document.querySelector(".hero-section");
+let index = 0;
+setInterval(function () {
+  index = index % imageSources.length;
+  heroSection.style.backgroundImage = `url(${imageSources[index]})`;
+  index++;
+}, 3000);

@@ -1,21 +1,31 @@
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  :root {
+    --header-height: 75px;
+  }
+
   header {
     position: relative;
+  }
+
+  .logo img {
+    width: 120px;
   }
 
   nav {
     display: none;
     position: absolute;
     top: 70px;
-    background-color: var(--bg-col);
+    /* background-color: var(--bg-col); */
     width: 100%;
   }
 
   nav li {
     display: block;
-    text-align: center;
+    text-align: right;
+    padding-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 20px;
   }
 
   .menu-icon-container {
@@ -25,7 +35,7 @@
   }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 769px) {
   nav {
     display: block !important;
   }

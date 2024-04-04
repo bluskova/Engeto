@@ -1,6 +1,7 @@
 :root {
-  --text-col: white;
-  --bg-col: #15304c;
+  --text-col: black;
+  --bg-col: #eee;
+  --header-height: 100px;
 }
 
 /* general properties */
@@ -10,12 +11,17 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-col);
+}
+
 header {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  background-color: var(--bg-col);
-  height: 70px;
+  align-items: baseline;
+  /* background-color: var(--bg-col); */
+  height: var(--header-height);
 }
 
 .logo {
@@ -26,19 +32,23 @@ header {
   width: 200px;
   margin-left: 20px;
   display: block;
-  margin-top: auto;
+  margin-top: 25px;
   margin-bottom: auto;
 }
 
 nav {
   margin-right: 30px;
+  background-color: var(--bg-col);
 }
 
 nav li {
   list-style-type: none;
   display: inline-block;
   margin-right: 20px;
+  font-size: 28px;
+  font-weight: 600;
 }
+
 nav li a {
   text-decoration: none;
   color: var(--text-col);
@@ -49,10 +59,16 @@ nav li a {
   display: none;
 }
 
-.welcome {
-  background-image: url("images/background.webp");
+.menu-icon-container i {
+  color: var(--text-col);
+  font-size: 26px;
+}
+
+.hero-section {
+  background-image: url("img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - var(--header-height) - 20px);
+  margin: 0 20px 20px 20px;
 }
