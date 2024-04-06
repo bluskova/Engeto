@@ -42,8 +42,12 @@ const imageSources = [
 ];
 
 let index = 0;
-setInterval(function () {
+const changePhotos = () => {
   index = index % imageSources.length;
   heroSection.style.backgroundImage = `url(${imageSources[index]})`;
   index++;
-}, 3000);
+};
+
+const timerID = setInterval(changePhotos, 3000);
+
+// clearInterval(timerID);
