@@ -20,8 +20,8 @@
 
   nav li {
     display: block;
-    text-align: right;
-    padding-right: 10px;
+    text-align: center;
+    /* padding-right: 10px; */
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 20px;
