@@ -1,10 +1,13 @@
 :root {
   --text-col: black;
-  --bg-col: rgb(238, 238, 238, 0.6); /* alpha => transparent menu */
+  --bg-col: rgb(238, 238, 238);
+  --bg-col-transparent: rgb(238, 238, 238, 0.6);
   --header-height: 100px;
 }
 
-/* general properties */
+/***********************************************************
+          common properties
+***********************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +20,28 @@ body {
   background-color: var(--bg-col);
 }
 
+.content-container {
+  /* all content is left and right aligned, margins 10% */
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1200px; /* max width for extra large device */
+}
+
+/***********************************************************
+          navigation & logo
+***********************************************************/
+
 header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: var(--bg-col);
+}
+
+.my-header {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -30,21 +54,14 @@ header {
 
 .logo img {
   width: 200px;
-  margin-left: 20px;
   display: block;
   margin-top: 25px;
   margin-bottom: auto;
 }
 
-nav {
-  margin-right: 30px;
-  background-color: var(--bg-col);
-}
-
 nav li {
   list-style-type: none;
   display: inline-block;
-  /* margin-right: 20px; */
   font-size: 28px;
   font-weight: 500;
 }
@@ -55,7 +72,6 @@ nav li a {
 }
 
 .menu-icon-container {
-  margin-right: 30px;
   display: none;
 }
 
@@ -64,12 +80,15 @@ nav li a {
   font-size: 26px;
 }
 
+/***********************************************************
+          hero section
+***********************************************************/
 .hero-section {
   background-image: url("img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: calc(100vh - var(--header-height) - 20px);
-  margin: 0 20px 20px 20px;
-  transition: all 1s linear;
+  height: 650px;
+  transition: background-image 1s linear;
+  z-index: 1;
 }
