@@ -1,8 +1,12 @@
+/********************  sm device  ********************/
+/*****************************************************/
 @media (max-width: 768px) {
+  /*******  root variables  *******/
   :root {
-    --header-height: 80px;
+    --header-height: 65px;
   }
 
+  /*******  common  *******/
   .content-container {
     /* all content is left and right aligned, margins 20px */
     width: calc(100% - 40px);
@@ -10,6 +14,7 @@
     margin-right: 20px;
   }
 
+  /*******  logo & navigation  *******/
   .my-header {
     position: relative;
   }
@@ -22,31 +27,79 @@
     display: none;
     position: absolute;
     top: var(--header-height);
-    width: 100%;
-    background-color: var(--bg-col-transparent);
+    left: -20px;
+    width: calc(100% + 40px);
+    background-color: var(--nav-col-transparent);
   }
 
   nav li {
     display: block;
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
     font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .menu-icon-container {
     display: block;
     color: var(--text-col);
-    font-size: 23px;
+    font-size: 26px;
   }
 
+  /*******  hero section  *******/
   .hero-section {
-    height: calc(100vh - var(--header-height) - 20px);
+    max-height: 200px;
+  }
+
+  /*******  about us section  *******/
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-box-one,
+  .about-box-two {
+    width: 100%;
+    margin: 0px;
+  }
+
+  /*******  our team  *******/
+
+  /*******  photo gallery  *******/
+  .gallery-item {
+    flex-basis: 100%;
+  }
+
+  /*******  contact  *******/
+  .contact-box {
+    display: block;
+  }
+
+  .contact-separator {
+    display: none;
+  }
+
+  /*******  footer  *******/
+  .footer-wrapper {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 }
 
+/********************  md, lg, xl, xxl device  ********************/
+/******************************************************************/
+
 @media (min-width: 769px) {
+  /*******  logo & navigation  *******/
   nav {
     display: block !important;
+  }
+}
+
+/********************  xxl device  ********************/
+/******************************************************/
+
+@media (min-width: 2000px) {
+  /*******  hero section  *******/
+  .hero-section {
+    height: 650px;
   }
 }

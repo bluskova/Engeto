@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Attack Brno" />
-    <meta name="keywords" content="Attack, futsal, futsal team" />
+    <meta
+      name="keywords"
+      content="Attack, Attack Brno, futsal, futsal team, futsalový tým, futsal 2. liga"
+    />
     <meta name="author" content="Barbora Lusková" />
     <!-- email: barbora.luskova@gmail.com  -->
     <!-- discord: bluskova -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Attack</title>
+    <title>Attack Brno</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -29,81 +32,405 @@
     ></script>
   </head>
   <body>
-    <!-- logo & navigation menu -->
-    <header id="home">
-      <div class="content-container my-header">
-        <div class="logo">
-          <a href="#home">
-            <img src="img/logo/logo_attack-bg-removed.png" alt="logo" />
-          </a>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#about-us">O klubu</a></li>
-            <li><a href="#team">Mužstvo</a></li>
-            <li><a href="#competitions">Soutěže</a></li>
-            <li><a href="#gallery">Galerie</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-          </ul>
-        </nav>
-        <div class="menu-icon-container">
-          <i class="fa-solid fa-bars"></i>
+    <!-------  logo & navigation menu  ------->
+    <header>
+      <div class="content-container">
+        <div class="my-header">
+          <div class="logo">
+            <a href="#home">
+              <img src="./img/logo/logo_attack-bg-removed.png" alt="logo" />
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#home" class="menu-item removed">Domů</a>
+              </li>
+              <li><a href="#about-us" class="menu-item">O nás</a></li>
+              <li><a href="#team" class="menu-item">Naši hráči</a></li>
+              <li><a href="#gallery" class="menu-item">Galerie</a></li>
+              <li><a href="#contact" class="menu-item">Kontakt</a></li>
+            </ul>
+          </nav>
+          <div class="menu-icon-container">
+            <i id="menu-icon" class="fa-solid fa-bars"></i>
+          </div>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- hero section - introduction image -->
-      <div class="content-container">
-        <section class="hero-section"></section>
-      </div>
+      <!-------  hero section - introduction image  ------->
+      <!-- <div class="content-container"> -->
+        <section id="home" class="hero-section anchor">
+          <div class="dots-container">
+            <!-- the same number as the number of hero images -->
+            <span class="dot active"></span>
+            <!-- <span class="dot"></span> -->
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </section>
+      <!-- </div> -->
 
-      <!-- about us section -->
-      <section id="about-us">
+      <!-------  about us section  ------->
+      <section id="about-us" class="anchor section-padding">
         <div class="content-container">
-          <h2>O klubu</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
-            quas maiores laborum iure eaque. Modi vel ducimus cumque eligendi
-            natus. Odit non voluptates enim saepe doloribus corrupti harum
-            nobis! Ipsa placeat quia, reprehenderit nesciunt, cumque facilis
-            quibusdam, sequi quo nobis minus est ut ullam neque ratione
-            accusantium ab qui quisquam.
-          </p>
+          <h2>
+            Vítejte na oficiálních stránkách futsalového týmu Attack&nbspBrno!
+          </h2>
+
+          <div class="about-wrapper">
+            <div class="about-box-one">
+              <h3>O nás</h3>
+            </div>
+            <div class="about-box-two">
+              <p>
+                 Quos a iste repellendus omnis odit reprehenderit quisquam ut distinctio illo provident, cumque laborum! Deserunt mollitia sint, iusto maiores voluptates in incidunt odit. Perspiciatis optio eaque officiis debitis consequuntur voluptatem. </p> 
+                 <p> Obcaecati assumenda quidem voluptatem incidunt harum cumque, eum in explicabo voluptatibus distinctio saepe cum ipsam sit dicta dolore dignissimos qui laudantium ea facere dolor fugiat itaque soluta nihil eius? Voluptate atque saepe odit ipsum fugiat sed adipisci quas eum? </p>
+                <p> Rem mollitia pariatur eaque explicabo facilis earum natus dolorem consectetur maxime odio ipsum fugiat a numquam accusantium sint nobis voluptas molestias dicta recusandae, enim eum expedita aspernatur?  Quidem, atque?
+              </p>
+            </div>
+          </div>
+
+          <div class="about-wrapper">
+            <div class="about-box-one">
+              <h3>Soutěže</h3>
+            </div>
+            <div class="about-box-two">
+              <p>
+                Doloribus corrupti harum nobis! Ipsa placeat quia, reprehenderit
+                nesciunt, cumque facilis quibusdam, sequi quo nobis minus est ut
+                ullam neque ratione accusantium ab qui quisquam. Modi vel
+                ducimus cumque eligendi natus. Odit non voluptates enim saepe.
+              </p>
+              <p>Aktuální soutěž: 2.B brněnská třída</p>
+              <p>
+                Rozlosování, výsledky soutěže a tabulky naleznete zde:
+                <!-- <a
+                  class="about-link"
+                  href="http://www.futsalbrno.cz/2-trida/"
+                  target="_blank"
+                  >www.futsalbrno.cz/2-trida</a
+                > -->
+
+                <div class="futsal-results-button-container">
+                  <a class="futsal-results-button"
+                    href="http://www.futsalbrno.cz/2-trida/" 
+                    target="_blank"
+                  >Rozlosování&nbsp&nbsp&nbsp+ &nbsp&nbsp&nbspvýsledky</a
+                  >
+                </div>
+              </p>
+            </div>
+          </div>
+
+          <div class="about-wrapper">
+            <div class="about-box-one">
+              <h3>Historie</h3>
+            </div>
+            <div class="about-box-two">
+              <p>
+                Doloribus corrupti harum nobis! Ipsa placeat quia, reprehenderit
+                nesciunt, cumque facilis quibusdam, sequi quo nobis minus est ut
+                ullam neque ratione accusantium ab qui quisquam. Modi vel
+                ducimus cumque eligendi natus. Odit non voluptates enim saepe.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- photo gallery -->
-      <div class="gallery">
-        <div class="content-container"></div>
-      </div>
+      <!-------  our team section  ------->
+      <section id="team" class="anchor section-padding">
+        <div class="content-container">
+          <h2>Naši hráči</h2>
 
-      <!-- contact - mail & adress-->
-      <section id="contact">
+          <div class="all-cards">
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/martin-turecek.jpg"
+                alt="profile picture"
+              />
+              <div class="name">Robert Boháč</div>
+              <div class="position">Univerzál</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">10</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/young-icon.png"
+                alt="profile picture"
+              />
+              <div class="name">Tomáš Fanta</div>
+              <div class="position">Brankář</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">1</div> 
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/young-icon.png"
+                alt="profile picture"
+              />
+              <div class="name">Michal Hladký</div>
+              <div class="position">Obránce</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">1</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/young-icon.png"
+                alt="profile picture"
+              />
+              <div class="name">Jaromír Kadlec</div>
+              <div class="position">Brankář</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">1</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/michal-kralicek.jpg"
+                alt="profile picture"
+              />
+              <div class="name">Michal Králíček</div>
+              <div class="position">Útočník</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">4</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/young-icon.png"
+                alt="profile picture"
+              />
+              <div class="name">Pavel Lidmila</div>
+              <div class="position">Obránce</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">7</div>
+
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/young-icon.png"
+                alt="profile picture"
+              />
+              <div class="name">Martin Liška</div>
+              <div class="position">Obránce</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">5</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/ivan.jpg"
+                alt="profile picture"
+              />
+              <div class="name">Ivan Luska</div>
+              <div class="position">Útočník</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">8</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/martin-turecek.jpg"
+                alt="profile picture"
+              />
+              <div class="name">Martin Tureček</div>
+              <div class="position">Obránce</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">6</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/martin-turecek.jpg"
+                alt="profile picture"
+              />
+              <div class="name">Martin Tušla</div>
+              <div class="position">Univerzál</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">9</div>
+            </div>
+
+            <div class="one-card">
+              <img
+                class="profile-photo"
+                src="./img/players/young-icon.png"
+                alt="profile picture"
+              />
+              <div class="name">Dominik Minarík</div>
+              <div class="position">Obránce</div>
+              <div class="number-label">
+                Číslo dresu: 
+              </div>
+              <div class="number">3</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------  photo gallery  ------->
+      <section id="gallery" class="anchor section-padding">
+        <h2>Galerie</h2>
+
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <img
+              src="./img/gallery/20230514_151351.jpg"
+              alt="photo from a futsal match"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./img/gallery/20230514_145144.jpg"
+              alt="photo from a futsal match"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./img/gallery/20221016_165925.jpg"
+              alt="photo from a futsal match"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./img/gallery/20230514_145141.jpg"
+              alt="photo from a futsal match"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./img/gallery/20221016_172050.jpg"
+              alt="photo from a futsal match"
+            />
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="./img/gallery/20220508_175156.jpg"
+              alt="photo from a futsal match"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-------  contact: mail & adress  ------->
+      <section id="contact" class="anchor section-padding">
         <div class="content-container">
           <h2>Kontakt</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus
-            assumenda saepe ut et debitis error natus, a reiciendis maiores
-            explicabo quisquam autem quia optio voluptate consectetur inventore
-            eius ad possimus atque delectus sed eum repellat consequatur
-            nesciunt. Ad non natus earum. Dolores facere quo quasi tempora
-            repellat culpa laborum corrupti hic natus itaque officiis velit nemo
-            autem mollitia deserunt, ab repellendus, dolorem inventore aliquid
-            ipsam fuga incidunt maxime laboriosam! Sit nostrum doloremque quam
-            impedit, optio ratione perspiciatis numquam laborum odio, aspernatur
-            eligendi? Laboriosam fuga doloribus maxime quaerat! Eaque commodi
-            nam repellendus dolorum odit veniam asperiores vero molestias
-            expedita laboriosam?
-          </p>
+
+          <div class="contact-wrapper">
+            <p>Ivan Luska</p>
+            <p>Veletržní 817/9, 603 00 Brno</p>
+            <p>
+              <div class="contact-box">
+                <span class="contact-label">tel.: </span>
+                <a class="contact-link" href="tel:+420-728-582-450"
+                  >+420 728 582 450</a
+                >
+              </div>
+
+              <div class="contact-box">
+                <span class="contact-separator">&nbsp|&nbsp</span>
+                <span class="contact-label">email:</span>
+                <a class="contact-link"
+                  href="mailto:luska.ivan@gmail.com?subject=Attack-web"
+                  >luska.ivan@gmail.com</a
+                >
+              </div>
+            </p>
+
+            <div class="contact-button-container">
+              <a class="contact-button"
+                href="mailto:luska.ivan@gmail.com?subject=Attack-web"
+                >Napište nám</a
+              >
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- footer -->
+      <!-------  footer  ------->
       <footer>
-        <div class="content-container"></div>
+        <div class="content-container">
+          <div class="footer-wrapper">
+
+            <div class="footer-one-box">
+              <p>Attack Brno z.s.</p>
+              <p>IČO: 14012057</p>
+              <p>Veletržní 817/9, 603 00 Brno</p>
+              <p>tel: <a class="contact-link-footer" href="tel:+420-728-582-450"
+                >+420 728 582 450</a
+              ></p>
+              <p>email: <a
+                class="contact-link-footer"
+                href="mailto:luska.ivan@gmail.com?subject=Attack-web"
+                >luska.ivan@gmail.com</a
+              ></p>
+            </div>
+
+            <div class="footer-one-box">
+              <p>Jsme členy Brněnské asociace futsalu</p>
+              <a href="http://www.futsalbrno.cz/" target="_blank">
+                <img src="./img/logo/logo_baf.png" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-copyright">
+            <p class="footer-text">
+              Copyright &copy; Attack Brno
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              . Všechna práva vyhrazena.
+            </p>
+  
+            <p class="footer-text">
+              Webové stránky vytvořila <a class="contact-link-footer" href="https://github.com/bluskova" target="_blank">bluskova</a>.
+            </p> 
+          </div>
+        </div>
       </footer>
     </main>
+
+    <!-------  javascript  ------->
     <script src="script.js"></script>
   </body>
 </html>
