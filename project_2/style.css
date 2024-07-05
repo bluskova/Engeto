@@ -1,14 +1,12 @@
 :root {
-  --text-col: black;
-  /* --bg-col: rgb(238, 238, 238); */
+  --text-col-dark: black;
+  --text-col-light: white;
   /* --bg-col: rgb(255, 251, 243); */
   --bg-col: white;
-  /*  --nav-col: #eaaf50; */
-  /* --nav-col-transparent: rgb(234, 175, 80, 0.9); */
   --nav-col: rgb(206, 75, 39);
   --nav-col-transparent: rgb(206, 75, 39, 0.9);
   --footer-col: rgb(206, 75, 39, 0.1);
-  --link-hover-col: rgb(206, 75, 39); /* rgb(157, 14, 14);*/
+  --link-hover-col: rgb(206, 75, 39);
   --header-height: 100px;
 }
 
@@ -108,19 +106,19 @@ nav li::first-letter {
 }
 
 .menu-item {
-  color: var(--text-col);
+  color: var(--text-col-light);
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   padding: 5px 10px;
-  border: 1px solid transparent;
   transition: 0.3s;
+  border: 2px solid transparent;
 }
 
 .menu-item:hover,
 .menu-item.active {
-  border: 1px solid var(--text-col);
+  border: 2px solid var(--text-col-light);
   border-radius: 5px;
 }
 
@@ -190,7 +188,7 @@ nav li::first-letter {
 }
 
 .about-link {
-  color: var(--text-col);
+  color: var(--text-col-dark);
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -211,9 +209,9 @@ nav li::first-letter {
 .futsal-results-button {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--text-col);
+  color: var(--text-col-dark);
   background-color: var(--bg-col);
-  border: 1px solid var(--text-col);
+  border: 1px solid var(--text-col-dark);
   border-radius: 2px;
   font-weight: 400;
   font-size: 15px;
@@ -250,7 +248,7 @@ nav li::first-letter {
 
 .one-card {
   width: 250px;
-  border: 1px solid var(--text-col);
+  border: 1px solid var(--text-col-dark);
   padding: 20px;
 
   display: flex;
@@ -344,7 +342,7 @@ nav li::first-letter {
 }
 
 .contact-link {
-  color: var(--text-col);
+  color: var(--text-col-dark);
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -366,9 +364,9 @@ nav li::first-letter {
 .contact-button {
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--text-col);
+  color: var(--text-col-dark);
   background-color: var(--bg-col);
-  border: 1px solid var(--text-col);
+  border: 1px solid var(--text-col-dark);
   border-radius: 2px;
   font-weight: 400;
   font-size: 15px;
@@ -413,7 +411,7 @@ footer {
 }
 
 .contact-link-footer {
-  color: var(--text-col);
+  color: var(--text-col-dark);
   text-decoration: none;
 }
 .contact-link-footer:hover {

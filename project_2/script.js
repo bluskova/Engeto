@@ -54,7 +54,6 @@ document.body.addEventListener("click", (event) => {
 const imageSources = [
   "./img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg",
   "./img/hero-img/chaos-soccer-gear-Cjfl8r_eYxY-unsplash.jpg",
-  // "./img/hero-img/omar-ram-kHhLJMRpRDI-unsplash.jpg",
   "./img/hero-img/vikram-tkv-JO19K0HDDXI-unsplash.jpg",
 ];
 

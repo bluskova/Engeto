@@ -41,7 +41,7 @@
 
   .menu-icon-container {
     display: block;
-    color: var(--text-col);
+    color: var(--text-col-light);
     font-size: 26px;
   }
 
