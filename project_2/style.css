@@ -38,21 +38,46 @@ body {
   max-width: 1600px; /* max width for extra large device */
 }
 
+h1,
 h2 {
   font-size: 26px;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   margin-top: 20px;
   margin-bottom: 40px;
   text-align: center;
+  letter-spacing: 0.5px;
+}
+
+h1::first-letter,
+h2::first-letter {
+  font-size: 32px;
 }
 
 h3 {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 350;
   text-transform: uppercase;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+h3::first-letter {
+  font-size: 26px;
+}
+
+.my-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-button {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s linear;
 }
 
 .anchor {
@@ -111,9 +136,9 @@ nav li::first-letter {
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 5px 10px;
-  transition: 0.3s;
   border: 2px solid transparent;
+  padding: 5px 10px;
+  transition: 0.3s linear;
 }
 
 .menu-item:hover,
@@ -172,13 +197,19 @@ nav li::first-letter {
 }
 
 .about-box-one {
-  width: 20%;
+  width: 25%;
   text-align: left;
+}
+
+.about-box-one h3 {
+  border-bottom: 5px solid var(--nav-col);
+  margin-right: 40px;
+  text-align: right;
 }
 
 .about-box-two {
   text-align: justify;
-  width: 80%;
+  width: 75%;
   margin: 20px 0px 20px 0px;
 }
 
@@ -198,34 +229,43 @@ nav li::first-letter {
   color: var(--link-hover-col);
 }
 
+.highlited-text {
+  color: var(--nav-col);
+  font-weight: bold;
+}
+
 .futsal-results-button-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
   margin-top: 40px;
 }
 
 .futsal-results-button {
-  text-decoration: none;
-  text-transform: uppercase;
-  color: var(--text-col-dark);
-  background-color: var(--bg-col);
-  border: 1px solid var(--text-col-dark);
-  border-radius: 2px;
-  font-weight: 400;
-  font-size: 15px;
+  color: var(--nav-col);
+  font-size: 18px;
+  font-weight: 500;
   letter-spacing: 0.5px;
-  text-align: center;
-  transition: 0.1s linear;
-
+  background-color: var(--text-col-light);
+  border: 2px solid var(--nav-col);
+  border-radius: 2px;
   padding: 15px 20px;
-  height: 50px;
-  width: 300px;
 }
 
 .futsal-results-button:hover {
-  letter-spacing: 1.5px;
+  background-color: var(--nav-col);
+  color: var(--text-col-light);
+}
+
+.my-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-button {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3s linear;
 }
 
 /********************  our team  ********************/
@@ -358,29 +398,29 @@ nav li::first-letter {
 }
 
 .contact-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin-top: 60px;
 }
 
 .contact-button {
-  text-decoration: none;
-  text-transform: uppercase;
   color: var(--text-col-dark);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
   background-color: var(--bg-col);
   border: 1px solid var(--text-col-dark);
   border-radius: 2px;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  text-align: center;
-  transition: 0.1s linear;
-
-  padding: 10px 20px;
-  height: 52px;
-  width: 180px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 190px;
+  box-sizing: content-box;
 }
 
 .contact-button:hover {
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
 }
 
 /********************  footer  ********************/

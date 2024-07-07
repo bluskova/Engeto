@@ -61,6 +61,11 @@
     margin: 0px;
   }
 
+  .about-box-one h3 {
+    margin-right: 0px;
+    text-align: left;
+  }
+
   /*******  our team  *******/
 
   /*******  photo gallery  *******/
