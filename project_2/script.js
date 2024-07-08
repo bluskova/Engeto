@@ -36,13 +36,6 @@ menuIcon.addEventListener("click", () => {
   }
 });
 
-// // close the navigation after click any link
-// navLinks.forEach((navLink) =>
-//   navLink.addEventListener("click", () => {
-//     closeNav();
-//   })
-// );
-
 // close the navigation after click anywhere (include 'navLinks', exclude 'menuIcon')
 document.body.addEventListener("click", (event) => {
   if (!hiddenNav && event.target.id !== "menu-icon") {
@@ -67,24 +60,6 @@ const changePhotos = () => {
 
 const timerID = setInterval(changePhotos, 5000);
 // clearInterval(timerID);
-
-// active navbar links on scroll
-// window.onscroll = () => {
-//   sections.forEach((oneSection) => {
-//     const top = window.scrollY;
-//     const offset = oneSection.offsetTop - 150;
-//     const height = oneSection.offsetHeight;
-//     const id = oneSection.getAttribute("id");
-//     if (top >= offset && top < offset + height) {
-//       navLinks.forEach((oneLink) => {
-//         oneLink.classList.remove("active");
-//       });
-//       document
-//         .querySelector("header nav li a[href*=" + id + "]")
-//         .classList.add("active");
-//     }
-//   });
-// };
 
 // active navbar links on scroll
 addEventListener("scroll", () => {
