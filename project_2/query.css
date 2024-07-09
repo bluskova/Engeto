@@ -1,6 +1,7 @@
 /********************  sm device  ********************/
 /*****************************************************/
-@media (max-width: 768px) {
+/* 905px - because of size and number of menu items... */
+@media (max-width: 905px) {
   /*******  root variables  *******/
   :root {
     --header-height: 65px;
@@ -93,8 +94,7 @@
 
 /********************  md, lg, xl, xxl device  ********************/
 /******************************************************************/
-
-@media (min-width: 769px) {
+@media (min-width: 905px) {
   /*******  logo & navigation  *******/
   nav {
     display: block !important;

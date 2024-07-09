@@ -229,17 +229,6 @@ nav li::first-letter {
   padding-bottom: var(--my-gap);
 }
 
-.about-link {
-  color: var(--my-black);
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.about-link:hover {
-  text-decoration: underline;
-  color: var(--link-hover-col);
-}
-
 .futsal-results-button-container {
   margin-top: var(--my-gap);
 }
@@ -311,6 +300,7 @@ nav li::first-letter {
   text-align: center;
   position: relative;
   border: 1px solid var(--main-color-alpha5);
+  width: 250px;
   padding-top: 30px;
   padding-bottom: 40px;
   margin-bottom: 30px;
@@ -345,10 +335,9 @@ nav li::first-letter {
 
 .one-card .position {
   color: var(--my-gray-dark);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  text-transform: capitalize;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -357,10 +346,6 @@ nav li::first-letter {
 .one-card .game-number {
   color: var(--my-white);
   background-color: var(--main-color);
-  text-transform: lowercase;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 1px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -370,18 +355,22 @@ nav li::first-letter {
   padding-bottom: 5px;
   visibility: hidden;
 }
+
 .one-card:hover .game-number {
   visibility: visible;
+}
+
+.one-card .game-number .number-label {
+  text-transform: lowercase;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .one-card .game-number .number {
   font-size: 22px;
   font-weight: 500;
   padding-left: 10px;
-}
-
-.one-card {
-  width: 250px;
 }
 
 /********************  photo gallery  ********************/
@@ -430,7 +419,7 @@ nav li::first-letter {
 
 .contact-separator {
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 22px;
 }
 
 .contact-button-container {
