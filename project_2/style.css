@@ -1,14 +1,16 @@
 :root {
-  --text-col-dark: black;
-  --text-col-light: white;
-  /* --bg-col: rgb(255, 251, 243); */
-  --bg-col: white;
-  --nav-col: rgb(206, 75, 39);
-  --nav-col-alpha9: rgb(206, 75, 39, 0.9);
-  --nav-col-alpha5: rgb(206, 75, 39, 0.5);
-  --nav-col-alpha1: rgb(206, 75, 39, 0.1);
+  --my-black: rgb(0, 0, 0);
+  --my-white: rgb(255, 255, 255);
+  --my-gray-light: rgb(187, 187, 187);
+  --my-gray-dark: rgb(78, 80, 82);
+  --bg-col: rgb(255, 255, 255);
+  --main-color: rgb(206, 75, 39);
+  --main-color-alpha9: rgb(206, 75, 39, 0.9);
+  --main-color-alpha5: rgb(206, 75, 39, 0.5);
+  --main-color-alpha1: rgb(206, 75, 39, 0.1);
   --link-hover-col: rgb(206, 75, 39);
   --header-height: 100px;
+  --my-gap: 20px;
 }
 
 /********************  common properties  ********************/
@@ -23,6 +25,14 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--bg-col);
+}
+
+.nonvisible {
+  display: none;
+}
+
+.anchor {
+  scroll-margin-top: var(--header-height);
 }
 
 .section-padding {
@@ -41,7 +51,7 @@ body {
 
 h1,
 h2 {
-  color: var(--nav-col);
+  color: var(--main-color);
   font-size: 26px;
   font-weight: 400;
   text-transform: uppercase;
@@ -69,7 +79,7 @@ h3::first-letter {
 }
 
 .highlited-text {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .my-button-container {
@@ -83,15 +93,7 @@ h3::first-letter {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  transition: 0.3s ease-out;
-}
-
-.anchor {
-  scroll-margin-top: var(--header-height);
-}
-
-.removed {
-  display: none;
+  transition: all 0.3s ease-out;
 }
 
 /********************  logo & navigation menu  ********************/
@@ -101,7 +103,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  background-color: var(--nav-col);
+  background-color: var(--main-color);
 }
 
 .my-header {
@@ -137,19 +139,19 @@ nav li::first-letter {
 }
 
 .menu-item {
-  color: var(--text-col-light);
+  color: var(--my-white);
   font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
   text-decoration: none;
   border: 2px solid transparent;
   padding: 5px 10px;
-  transition: 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .menu-item:hover,
 .menu-item.active {
-  border: 2px solid var(--text-col-light);
+  border: 2px solid var(--my-white);
   border-radius: 5px;
 }
 
@@ -183,15 +185,16 @@ nav li::first-letter {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: #bbb;
-  border: 1px solid var(--bg-col);
+  background-color: var(--my-gray-light);
+  border: 1px solid var(--my-white);
   display: inline-block;
   z-index: 10;
-  transition: 1s linear;
+  transition: all 1s linear;
 }
 
 .dot.active {
-  background-color: #717171;
+  /* background-color: #717171; */
+  background-color: var(--my-gray-dark);
 }
 
 /********************  about us  ********************/
@@ -209,7 +212,7 @@ nav li::first-letter {
 }
 
 .about-box-one h3 {
-  border-bottom: 5px solid var(--nav-col);
+  border-bottom: 5px solid var(--main-color);
   margin-right: 40px;
   text-align: right;
 }
@@ -226,7 +229,7 @@ nav li::first-letter {
 }
 
 .about-link {
-  color: var(--text-col-dark);
+  color: var(--my-black);
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -241,19 +244,19 @@ nav li::first-letter {
 }
 
 .futsal-results-button {
-  color: var(--nav-col);
+  color: var(--main-color);
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.5px;
-  background-color: var(--text-col-light);
-  border: 2px solid var(--nav-col);
+  background-color: var(--my-white);
+  border: 2px solid var(--main-color);
   border-radius: 2px;
   padding: 15px 20px;
 }
 
 .futsal-results-button:hover {
-  background-color: var(--nav-col);
-  color: var(--text-col-light);
+  background-color: var(--main-color);
+  color: var(--my-white);
 }
 
 .my-button-container {
@@ -267,7 +270,7 @@ nav li::first-letter {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  transition: 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 /********************  our team  ********************/
@@ -290,7 +293,7 @@ nav li::first-letter {
 }
 
 #team h2 {
-  background-color: var(--bg-col);
+  background-color: var(--my-white);
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -306,10 +309,10 @@ nav li::first-letter {
 }
 
 .one-card {
-  background-color: var(--bg-col);
+  background-color: var(--my-white);
   text-align: center;
   position: relative;
-  border: 1px solid var(--nav-col-alpha5);
+  border: 1px solid var(--main-color-alpha5);
 
   padding-top: 30px;
   padding-bottom: 40px;
@@ -318,7 +321,7 @@ nav li::first-letter {
 
 .one-card .picture-container {
   display: inline-block;
-  background-color: var(--nav-col);
+  background-color: var(--main-color);
   height: 130px;
   width: 130px;
   border-radius: 50%;
@@ -333,13 +336,9 @@ nav li::first-letter {
   border-radius: 50%;
   transition: all 0.9s ease 0s;
 }
-/* .picture-img {
-  object-fit: cover;
-  margin-bottom: 50px;
-} */
 
 .one-card:hover .picture-container .picture-img {
-  box-shadow: 0 0 0 14px white;
+  box-shadow: 0 0 0 14px var(--my-white);
   transform: scale(0.7);
 }
 
@@ -349,7 +348,7 @@ nav li::first-letter {
 }
 
 .one-card .position {
-  color: #4e5052;
+  color: var(--my-gray-dark);
   font-size: 16px;
   font-weight: 500;
   text-transform: capitalize;
@@ -361,8 +360,8 @@ nav li::first-letter {
 }
 
 .one-card .game-number {
-  color: var(--text-col-light);
-  background-color: var(--nav-col);
+  color: var(--my-white);
+  background-color: var(--main-color);
   text-transform: lowercase;
   font-size: 14px;
   font-weight: 500;
@@ -427,7 +426,7 @@ nav li::first-letter {
 }
 
 .contact-link {
-  color: var(--text-col-dark);
+  color: var(--my-black);
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -438,7 +437,7 @@ nav li::first-letter {
 }
 
 .contact-separator {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.3rem;
 }
 
@@ -451,12 +450,12 @@ nav li::first-letter {
 }
 
 .contact-button {
-  color: var(--text-col-dark);
+  color: var(--my-black);
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
-  background-color: var(--bg-col);
-  border: 1px solid var(--text-col-dark);
+  background-color: var(--my-white);
+  border: 1px solid var(--my-black);
   border-radius: 2px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -471,7 +470,7 @@ nav li::first-letter {
 /********************  footer  ********************/
 
 footer {
-  background-color: var(--nav-col-alpha1);
+  background-color: var(--main-color-alpha1);
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -496,7 +495,7 @@ footer {
 }
 
 .contact-link-footer {
-  color: var(--text-col-dark);
+  color: var(--my-black);
   text-decoration: none;
 }
 

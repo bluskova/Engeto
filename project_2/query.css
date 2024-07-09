@@ -29,7 +29,7 @@
     top: var(--header-height);
     left: -20px;
     width: calc(100% + 40px);
-    background-color: var(--nav-col-alpha9);
+    background-color: var(--main-color-alpha9);
   }
 
   nav li {
@@ -41,7 +41,7 @@
 
   .menu-icon-container {
     display: block;
-    color: var(--text-col-light);
+    color: var(--my-white);
     font-size: 26px;
   }
 
