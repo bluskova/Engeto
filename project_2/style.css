@@ -1,3 +1,4 @@
+/********************  root variables  ********************/
 :root {
   --my-black: rgb(0, 0, 0);
   --my-white: rgb(255, 255, 255);
@@ -14,7 +15,6 @@
 }
 
 /********************  common properties  ********************/
-
 * {
   margin: 0;
   padding: 0;
@@ -55,10 +55,15 @@ h2 {
   font-size: 26px;
   font-weight: 400;
   text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 40px;
   text-align: center;
   letter-spacing: 0.5px;
+  margin-top: var(--my-gap);
+  margin-bottom: calc(2 * var(--my-gap));
+}
+
+h2 {
+  padding-top: var(--my-gap);
+  padding-bottom: var(--my-gap);
 }
 
 h1::first-letter,
@@ -70,8 +75,8 @@ h3 {
   font-size: 20px;
   font-weight: 350;
   text-transform: uppercase;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: var(--my-gap);
+  margin-bottom: calc(2 * var(--my-gap));
 }
 
 h3::first-letter {
@@ -97,7 +102,6 @@ h3::first-letter {
 }
 
 /********************  logo & navigation menu  ********************/
-
 header {
   position: -webkit-sticky;
   position: sticky;
@@ -131,7 +135,7 @@ header {
 nav li {
   list-style-type: none;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: var(--my-gap);
 }
 
 nav li::first-letter {
@@ -160,7 +164,6 @@ nav li::first-letter {
 }
 
 /********************  hero section  ********************/
-
 .hero-section {
   background-image: url("./img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg");
   background-size: cover;
@@ -193,12 +196,10 @@ nav li::first-letter {
 }
 
 .dot.active {
-  /* background-color: #717171; */
   background-color: var(--my-gray-dark);
 }
 
 /********************  about us  ********************/
-
 .about-wrapper {
   display: flex;
   flex-direction: row;
@@ -220,12 +221,12 @@ nav li::first-letter {
 .about-box-two {
   text-align: justify;
   width: 75%;
-  margin: 20px 0px 20px 0px;
+  margin: var(--my-gap) 0 var(--my-gap) 0;
 }
 
 .about-box-two p {
   line-height: 1.5;
-  padding-bottom: 20px;
+  padding-bottom: var(--my-gap);
 }
 
 .about-link {
@@ -240,7 +241,7 @@ nav li::first-letter {
 }
 
 .futsal-results-button-container {
-  margin-top: 20px;
+  margin-top: var(--my-gap);
 }
 
 .futsal-results-button {
@@ -251,7 +252,7 @@ nav li::first-letter {
   background-color: var(--my-white);
   border: 2px solid var(--main-color);
   border-radius: 2px;
-  padding: 15px 20px;
+  padding: 10px 20px;
 }
 
 .futsal-results-button:hover {
@@ -274,7 +275,6 @@ nav li::first-letter {
 }
 
 /********************  our team  ********************/
-
 #team {
   position: relative;
 }
@@ -285,17 +285,15 @@ nav li::first-letter {
   background-image: url("./img/hero-img/chaos-soccer-gear-Cjfl8r_eYxY-unsplash-black-and-white.jpg");
   background-size: cover;
   position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   opacity: 0.9;
 }
 
 #team h2 {
   background-color: var(--my-white);
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .all-cards {
@@ -305,7 +303,7 @@ nav li::first-letter {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: var(--my-gap);
 }
 
 .one-card {
@@ -313,7 +311,6 @@ nav li::first-letter {
   text-align: center;
   position: relative;
   border: 1px solid var(--main-color-alpha5);
-
   padding-top: 30px;
   padding-bottom: 40px;
   margin-bottom: 30px;
@@ -325,7 +322,6 @@ nav li::first-letter {
   height: 130px;
   width: 130px;
   border-radius: 50%;
-
   margin-top: 20px;
   margin-bottom: 50px;
 }
@@ -354,7 +350,6 @@ nav li::first-letter {
   text-transform: capitalize;
   /* text-transform: uppercase; */
   letter-spacing: 1.5px;
-
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -390,20 +385,18 @@ nav li::first-letter {
 }
 
 /********************  photo gallery  ********************/
-
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-
-  gap: 20px;
+  gap: var(--my-gap);
 }
 
 .gallery-item {
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: calc(50% - 10px);
+  flex-basis: calc(50% - var(--my-gap) / 2);
 }
 
 .gallery-item img {
@@ -415,7 +408,6 @@ nav li::first-letter {
 }
 
 /********************  contact  ********************/
-
 .contact-wrapper {
   text-align: center;
   line-height: 2;
@@ -428,7 +420,7 @@ nav li::first-letter {
 .contact-link {
   color: var(--my-black);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 18px;
 }
 
 .contact-link:hover {
@@ -468,11 +460,10 @@ nav li::first-letter {
 }
 
 /********************  footer  ********************/
-
 footer {
   background-color: var(--main-color-alpha1);
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: calc(2 * var(--my-gap));
+  padding-bottom: calc(2 * var(--my-gap));
 }
 
 .footer-wrapper {
@@ -510,13 +501,13 @@ footer {
   align-items: center;
   justify-content: flex-start;
   height: 200px;
-  margin: 20px;
+  margin: var(--my-gap);
 }
 
 .footer-copyright {
   font-size: 12px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: calc(2 * var(--my-gap));
 }
 
 .footer-text {
