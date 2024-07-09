@@ -29,7 +29,7 @@
     top: var(--header-height);
     left: -20px;
     width: calc(100% + 40px);
-    background-color: var(--nav-col-transparent);
+    background-color: var(--nav-col-alpha9);
   }
 
   nav li {

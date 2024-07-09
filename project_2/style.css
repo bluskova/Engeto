@@ -4,8 +4,9 @@
   /* --bg-col: rgb(255, 251, 243); */
   --bg-col: white;
   --nav-col: rgb(206, 75, 39);
-  --nav-col-transparent: rgb(206, 75, 39, 0.9);
-  --footer-col: rgb(206, 75, 39, 0.1);
+  --nav-col-alpha9: rgb(206, 75, 39, 0.9);
+  --nav-col-alpha5: rgb(206, 75, 39, 0.5);
+  --nav-col-alpha1: rgb(206, 75, 39, 0.1);
   --link-hover-col: rgb(206, 75, 39);
   --header-height: 100px;
 }
@@ -272,74 +273,121 @@ nav li::first-letter {
 /********************  our team  ********************/
 
 #team {
-  /* background-image: url("./img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg");
-  opacity: 0.5;
+  position: relative;
+}
+
+/* background image with opacity => have to use pseudo-class before */
+#team::before {
+  content: "";
+  background-image: url("./img/hero-img/chaos-soccer-gear-Cjfl8r_eYxY-unsplash-black-and-white.jpg");
   background-size: cover;
-  background-position: center; */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.9;
+}
+
+#team h2 {
+  background-color: var(--bg-col);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .all-cards {
+  font-family: tahoma;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 50px;
-}
-
-.one-card {
-  width: 250px;
-  border: 1px solid var(--text-col-dark);
-  padding: 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
 }
 
-.one-card:hover {
-  transform: scale(1.1);
+.one-card {
+  background-color: var(--bg-col);
+  text-align: center;
+  position: relative;
+  border: 1px solid var(--nav-col-alpha5);
+
+  padding-top: 30px;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
 }
 
-.profile-photo {
-  width: 150px;
-  height: 150px;
+.one-card .picture-container {
+  display: inline-block;
+  background-color: var(--nav-col);
+  height: 130px;
+  width: 130px;
   border-radius: 50%;
-  object-fit: cover;
+
   margin-top: 20px;
   margin-bottom: 50px;
 }
 
-.name {
-  text-transform: uppercase;
+.one-card .picture-container .picture-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transition: all 0.9s ease 0s;
+}
+/* .picture-img {
+  object-fit: cover;
+  margin-bottom: 50px;
+} */
+
+.one-card:hover .picture-container .picture-img {
+  box-shadow: 0 0 0 14px white;
+  transform: scale(0.7);
+}
+
+.one-card .name {
+  font-size: 28px;
   font-weight: 500;
-  letter-spacing: 2.5px;
 }
 
-.name::first-letter {
-  font-size: 22px;
-}
-
-.position {
-  text-transform: uppercase;
-  font-weight: 400;
+.one-card .position {
+  color: #4e5052;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  /* text-transform: uppercase; */
   letter-spacing: 1.5px;
-  font-size: 14px;
+
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.number-label {
+.one-card .game-number {
+  color: var(--text-col-light);
+  background-color: var(--nav-col);
   text-transform: lowercase;
   font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s ease 0s;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  visibility: hidden;
+}
+.one-card:hover .game-number {
+  visibility: visible;
 }
 
-.number {
-  font-size: 14px;
-  font-weight: 400;
+.one-card .game-number .number {
+  font-size: 22px;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.one-card {
+  width: 250px;
 }
 
 /********************  photo gallery  ********************/
@@ -423,7 +471,7 @@ nav li::first-letter {
 /********************  footer  ********************/
 
 footer {
-  background-color: var(--footer-col);
+  background-color: var(--nav-col-alpha1);
   padding-top: 40px;
   padding-bottom: 40px;
 }
