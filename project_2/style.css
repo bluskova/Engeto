@@ -19,7 +19,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px solid red; */
 }
 
 body {
@@ -249,20 +248,6 @@ nav li::first-letter {
   color: var(--my-white);
 }
 
-.my-button-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.my-button {
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.3s linear;
-}
-
 /********************  our team  ********************/
 #team {
   position: relative;
@@ -323,7 +308,7 @@ nav li::first-letter {
   width: 100%;
   height: auto;
   border-radius: 50%;
-  transition: all 0.9s ease 0s;
+  transition: all 0.9s ease;
 }
 
 .one-card:hover .picture-container .picture-img {
@@ -353,7 +338,7 @@ nav li::first-letter {
   bottom: 0;
   left: 0;
   width: 100%;
-  transition: all 0.5s ease 0s;
+  transition: all 0.5s ease;
   padding-top: 5px;
   padding-bottom: 5px;
   visibility: hidden;
@@ -398,7 +383,6 @@ nav li::first-letter {
 }
 
 /********************  contact  ********************/
-
 #contact {
   position: relative;
 }
@@ -457,12 +441,12 @@ nav li::first-letter {
 }
 
 .contact-button {
-  color: var(--my-black);
+  color: var(--main-color);
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 1px;
   background-color: var(--my-white);
-  border: 1px solid var(--my-black);
+  border: 1px solid var(--main-color);
   border-radius: 2px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -471,6 +455,8 @@ nav li::first-letter {
 }
 
 .contact-button:hover {
+  background-color: var(--main-color);
+  color: var(--my-white);
   letter-spacing: 3px;
 }
 
