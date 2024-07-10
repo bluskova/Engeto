@@ -362,23 +362,94 @@ nav li::first-letter {
 }
 
 /********************  photo gallery  ********************/
+#gallery {
+  background-color: var(--bg-col);
+  position: relative;
+}
+
+/* background image with opacity => use pseudo-class before */
+#gallery::before {
+  /* content: "";
+  background-image: url("./img/hero-img/peter-glaser-UVWULib2OHM-unsplash-black-and-white.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.7; */
+}
+
+#gallery h2 {
+  /* width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--my-white); */
+}
+
 .gallery-container {
+  position: relative;
+}
+
+.gallery-container .image-container {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
   gap: var(--my-gap);
+  justify-content: center;
 }
 
-.gallery-item {
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: calc(50% - var(--my-gap) / 2);
+.gallery-container .image-container .image {
+  width: calc(50% - var(--my-gap) / 2);
+  height: auto;
+  border: 10px solid var(--my-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.gallery-item img {
-  width: 100%;
+.gallery-container .image-container .image img {
   height: 100%;
-  display: block;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s linear;
+}
+
+.gallery-container .image-container .image:hover img {
+  transform: scale(1.2);
+}
+
+.gallery-container .popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+  /* display: block; */
+}
+
+.gallery-container .popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: var(--my-white);
+  cursor: pointer;
+  z-index: 100;
+}
+
+.gallery-container .popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--my-white);
+  border-radius: 5px;
+  width: 75%;
+  max-width: 990px;
   object-fit: cover;
 }
 

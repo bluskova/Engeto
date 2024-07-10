@@ -1,7 +1,7 @@
 /********************  sm device  ********************/
 /*****************************************************/
-/* 905px - because of size and number of menu items... */
-@media (max-width: 905px) {
+/* 990px - because of size and number of menu items... */
+@media (max-width: 990px) {
   /*******  root variables  *******/
   :root {
     --header-height: 65px;
@@ -70,10 +70,22 @@
   }
 
   /*******  our team  *******/
+  .all-cards {
+    justify-content: space-evenly;
+  }
 
   /*******  photo gallery  *******/
-  .gallery-item {
-    flex-basis: 100%;
+  .gallery-container .image-container .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-container .popup-image span {
+    font-size: 40px;
+  }
+
+  .gallery-container .popup-image img {
+    width: 95%;
   }
 
   /*******  contact  *******/
@@ -94,7 +106,7 @@
 
 /********************  md, lg, xl, xxl device  ********************/
 /******************************************************************/
-@media (min-width: 905px) {
+@media (min-width: 990px) {
   /*******  logo & navigation  *******/
   nav {
     display: block !important;
