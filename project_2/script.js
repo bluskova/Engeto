@@ -6,6 +6,11 @@ const dots = document.querySelectorAll(".dot");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav li a");
 
+const images = document.querySelectorAll(".image-container img");
+const popupImage = document.querySelector(".popup-image");
+const popupImageImg = document.querySelector(".popup-image img");
+const popupImageClose = document.querySelector(".popup-image span");
+
 // function which replace the hamburger and cross icon
 const replaceClass = (element, oldClass, newClass) => {
   element.classList.remove(oldClass);
@@ -75,4 +80,16 @@ addEventListener("scroll", () => {
       navLinks[index].classList.add("active");
     }
   });
+});
+
+// popup photo gallery
+images.forEach((oneImage) => {
+  oneImage.addEventListener("click", () => {
+    popupImage.style.display = "block";
+    popupImageImg.src = oneImage.getAttribute("src");
+  });
+});
+
+popupImageClose.addEventListener("click", () => {
+  popupImage.style.display = "none";
 });
