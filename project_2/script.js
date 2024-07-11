@@ -62,12 +62,14 @@ addEventListener("scroll", () => {
     const top = window.scrollY;
     const offset = oneSection.offsetTop - 150;
     const height = oneSection.offsetHeight;
-    // const id = oneSection.getAttribute("id");
+    const id = oneSection.getAttribute("id");
     if (top >= offset && top < offset + height) {
       navLinks.forEach((oneLink) => {
         oneLink.classList.remove("active");
+        if (oneLink.getAttribute("href") === `#${id}`) {
+          oneLink.classList.add("active");
+        }
       });
-      navLinks[index].classList.add("active");
     }
   });
 });
@@ -80,7 +82,7 @@ const heroImageSources = [
   "./img/hero-img/vikram-tkv-JO19K0HDDXI-unsplash.jpg",
 ];
 
-// change hero image every 3 sec
+// change hero image
 let heroImageIndex = 0;
 const changePhotos = () => {
   dots[heroImageIndex].classList.remove("active");
@@ -89,8 +91,8 @@ const changePhotos = () => {
   heroSection.style.backgroundImage = `url(${heroImageSources[heroImageIndex]})`;
 };
 
+// call function 'changePhotos' at specified intervals - 5 sec
 const timerID = setInterval(changePhotos, 5000);
-// clearInterval(timerID);
 
 /////////////////////////// popup gallery /////////////////////////////////
 
