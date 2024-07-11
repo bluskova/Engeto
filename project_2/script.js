@@ -1,15 +1,21 @@
-// select from html
+/////////////////////////// select from html /////////////////////////////////
+// navigation
 const menuIcon = document.getElementById("menu-icon");
 const navigation = document.querySelector("header nav");
-const heroSection = document.querySelector(".hero-section");
-const dots = document.querySelectorAll(".dot");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav li a");
-
-const images = document.querySelectorAll(".image-container img");
+// hero images
+const heroSection = document.querySelector(".hero-section");
+const dots = document.querySelectorAll(".dot");
+// popup gallery
+const allImages = document.querySelectorAll(".image-container img");
 const popupImage = document.querySelector(".popup-image");
 const popupImageImg = document.querySelector(".popup-image img");
-const popupImageClose = document.querySelector(".popup-image span");
+const popupImageClose = document.querySelector(".popup-image .close");
+const popupImageLeft = document.querySelector(".popup-image .left");
+const popupImageRight = document.querySelector(".popup-image .right");
+
+/////////////////////////// navigation /////////////////////////////////
 
 // function which replace the hamburger and cross icon
 const replaceClass = (element, oldClass, newClass) => {
@@ -48,24 +54,6 @@ document.body.addEventListener("click", (event) => {
   }
 });
 
-// change hero image every 3 sec
-const imageSources = [
-  "./img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg",
-  "./img/hero-img/chaos-soccer-gear-Cjfl8r_eYxY-unsplash.jpg",
-  "./img/hero-img/vikram-tkv-JO19K0HDDXI-unsplash.jpg",
-];
-
-let imageIndex = 0;
-const changePhotos = () => {
-  dots[imageIndex].classList.remove("active");
-  imageIndex = (imageIndex + 1) % imageSources.length;
-  dots[imageIndex].classList.add("active");
-  heroSection.style.backgroundImage = `url(${imageSources[imageIndex]})`;
-};
-
-const timerID = setInterval(changePhotos, 5000);
-// clearInterval(timerID);
-
 // active navbar links on scroll
 addEventListener("scroll", () => {
   sections.forEach((oneSection, index) => {
@@ -82,14 +70,76 @@ addEventListener("scroll", () => {
   });
 });
 
-// popup photo gallery
-images.forEach((oneImage) => {
+/////////////////////////// hero images /////////////////////////////////
+
+const heroImageSources = [
+  "./img/hero-img/peter-glaser-UVWULib2OHM-unsplash.jpg",
+  "./img/hero-img/chaos-soccer-gear-Cjfl8r_eYxY-unsplash.jpg",
+  "./img/hero-img/vikram-tkv-JO19K0HDDXI-unsplash.jpg",
+];
+
+// change hero image every 3 sec
+let heroImageIndex = 0;
+const changePhotos = () => {
+  dots[heroImageIndex].classList.remove("active");
+  heroImageIndex = (heroImageIndex + 1) % heroImageSources.length;
+  dots[heroImageIndex].classList.add("active");
+  heroSection.style.backgroundImage = `url(${heroImageSources[heroImageIndex]})`;
+};
+
+const timerID = setInterval(changePhotos, 5000);
+// clearInterval(timerID);
+
+/////////////////////////// popup gallery /////////////////////////////////
+
+// number of all images in the gallery
+const numberOfAllImages = allImages.length;
+
+// inicialize 'gallerySlideIndex'
+let gallerySlideIndex = 0;
+
+// function which find the index of next or previous image
+// and change source of popup image (depend on this index)
+const changePopupImage = (leftRight) => {
+  if (leftRight === "left") {
+    shift = -1;
+  } else if (leftRight === "right") {
+    shift = 1;
+  } else {
+    throw new Error("Parameter can be 'left' or 'right'.");
+  }
+
+  gallerySlideIndex =
+    (gallerySlideIndex + numberOfAllImages + shift) % numberOfAllImages;
+
+  popupImageImg.src = allImages[gallerySlideIndex].getAttribute("src");
+};
+
+// popup photo -> on click any image
+allImages.forEach((oneImage, index) => {
   oneImage.addEventListener("click", () => {
     popupImage.style.display = "block";
     popupImageImg.src = oneImage.getAttribute("src");
+    gallerySlideIndex = index;
   });
 });
 
+// close popup image - click on photo
+popupImageImg.addEventListener("click", () => {
+  popupImage.style.display = "none";
+});
+
+// close popup image - click on cross
 popupImageClose.addEventListener("click", () => {
   popupImage.style.display = "none";
+});
+
+// previous popup image - click on '<'
+popupImageLeft.addEventListener("click", () => {
+  changePopupImage("left");
+});
+
+// next popup image - click on '>'
+popupImageRight.addEventListener("click", () => {
+  changePopupImage("right");
 });

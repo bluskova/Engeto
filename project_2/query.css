@@ -76,12 +76,24 @@
 
   /*******  photo gallery  *******/
   .gallery-container .image-container .image {
-    width: 100%;
+    width: 75%;
     height: auto;
   }
 
   .gallery-container .popup-image span {
     font-size: 40px;
+  }
+
+  .gallery-container .popup-image .close {
+    right: var(--my-gap);
+  }
+
+  .gallery-container .popup-image .left {
+    left: calc(var(--my-gap) * 1.5);
+  }
+
+  .gallery-container .popup-image .right {
+    right: calc(var(--my-gap) * 1.5);
   }
 
   .gallery-container .popup-image img {
