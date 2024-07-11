@@ -14,6 +14,8 @@ const popupImageImg = document.querySelector(".popup-image img");
 const popupImageClose = document.querySelector(".popup-image .close");
 const popupImageLeft = document.querySelector(".popup-image .left");
 const popupImageRight = document.querySelector(".popup-image .right");
+// footer
+const footerCopyright = document.querySelector(".copyright");
 
 /////////////////////////// navigation /////////////////////////////////
 
@@ -143,3 +145,20 @@ popupImageLeft.addEventListener("click", () => {
 popupImageRight.addEventListener("click", () => {
   changePopupImage("right");
 });
+
+// close or shift popup image - press the key on keyboard
+window.addEventListener("keydown", (event) => {
+  if (event.code === "Escape") {
+    popupImage.style.display = "none";
+  } else if (event.code === "Numpad4" || event.code === "ArrowLeft") {
+    changePopupImage("left");
+  } else if (event.code === "Numpad6" || event.code === "ArrowRight") {
+    changePopupImage("right");
+  }
+});
+
+/////////////////////////// footer  /////////////////////////////////
+
+// copyright - actual year
+const thisYear = new Date().getFullYear();
+footerCopyright.append(thisYear);

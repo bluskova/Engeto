@@ -428,34 +428,34 @@ nav li::first-letter {
   width: 100%;
   z-index: 100;
   display: none;
-  /* display: block; */
 }
 
 .gallery-container .popup-image span {
   font-size: 60px;
-
+  padding: 10px 20px;
   color: var(--my-white);
   cursor: pointer;
   z-index: 100;
 }
 
 .gallery-container .popup-image .close {
-  /* font-weight: bolder; */
   position: absolute;
   top: 0;
-  right: var(--my-gap);
+  right: 0;
 }
 
 .gallery-container .popup-image .left {
   position: absolute;
+  left: 0;
   top: 50%;
-  left: var(--my-gap);
+  transform: translateY(-50%);
 }
 
 .gallery-container .popup-image .right {
   position: absolute;
+  right: 0;
   top: 50%;
-  right: var(--my-gap);
+  transform: translateY(-50%);
 }
 
 .gallery-container .popup-image img {

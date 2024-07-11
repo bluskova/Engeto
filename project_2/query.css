@@ -84,16 +84,14 @@
     font-size: 40px;
   }
 
-  .gallery-container .popup-image .close {
-    right: var(--my-gap);
-  }
-
   .gallery-container .popup-image .left {
-    left: calc(var(--my-gap) * 1.5);
+    padding: 5px 10px;
+    left: var(--my-gap);
   }
 
   .gallery-container .popup-image .right {
-    right: calc(var(--my-gap) * 1.5);
+    padding: 5px 10px;
+    right: var(--my-gap);
   }
 
   .gallery-container .popup-image img {
