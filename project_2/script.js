@@ -164,8 +164,8 @@ let touchstartX = 0;
 let touchendX = 0;
 
 const checkDirection = () => {
-  if (touchendX > touchstartX) changePopupImage("right");
-  if (touchendX < touchstartX) changePopupImage("left");
+  if (touchendX > touchstartX) changePopupImage("left");
+  if (touchendX < touchstartX) changePopupImage("right");
 };
 
 document.addEventListener("touchstart", (event) => {
