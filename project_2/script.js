@@ -159,6 +159,24 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
+// swipe photos left and right on touchpad
+let touchstartX = 0;
+let touchendX = 0;
+
+const checkDirection = () => {
+  if (touchendX > touchstartX) changePopupImage("right");
+  if (touchendX < touchstartX) changePopupImage("left");
+};
+
+document.addEventListener("touchstart", (event) => {
+  touchstartX = event.changedTouches[0].screenX;
+});
+
+document.addEventListener("touchend", (event) => {
+  touchendX = event.changedTouches[0].screenX;
+  checkDirection();
+});
+
 /////////////////////////// footer  /////////////////////////////////
 
 // copyright - actual year
