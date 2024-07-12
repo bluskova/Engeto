@@ -70,11 +70,19 @@
   }
 
   /*******  our team  *******/
+  #team h2 {
+    width: 100%;
+  }
+
   .all-cards {
     justify-content: space-evenly;
   }
 
   /*******  photo gallery  *******/
+  #gallery h2 {
+    width: 100%;
+  }
+
   .gallery-container .image-container .image {
     width: 75%;
     height: auto;
@@ -99,6 +107,10 @@
   }
 
   /*******  contact  *******/
+  #contact h2 {
+    width: 100%;
+  }
+
   .contact-box {
     display: block;
   }
