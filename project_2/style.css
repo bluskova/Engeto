@@ -400,7 +400,8 @@ nav li::first-letter {
 }
 
 .gallery-container .image-container .image {
-  width: calc(50% - var(--my-gap) / 2);
+  /* 3 pictures next to each other */
+  width: calc((100% - (2 * var(--my-gap))) / 3);
   height: auto;
   border: 10px solid var(--my-white);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

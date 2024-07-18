@@ -84,7 +84,8 @@
   }
 
   .gallery-container .image-container .image {
-    width: 75%;
+    /* 2 pictures next to each other */
+    width: calc((100% - var(--my-gap)) / 2);
     height: auto;
   }
 
@@ -123,6 +124,16 @@
   .footer-wrapper {
     flex-direction: column-reverse;
     gap: calc(2 * var(--my-gap));
+  }
+}
+
+/********************  xs device  ********************/
+/*****************************************************/
+/*******  photo gallery  *******/
+@media (max-width: 450px) {
+  .gallery-container .image-container .image {
+    width: 75%;
+    height: auto;
   }
 }
 
