@@ -1,7 +1,7 @@
 /********************  sm device  ********************/
 /*****************************************************/
-/* 990px - because of size and number of menu items... */
-@media (max-width: 990px) {
+/* 1065px - because of size and number of menu items... */
+@media (max-width: 1065px) {
   /*******  root variables  *******/
   :root {
     --header-height: 65px;
@@ -107,6 +107,11 @@
     width: 95%;
   }
 
+  /*******  history  *******/
+  #history h2 {
+    width: 100%;
+  }
+
   /*******  contact  *******/
   #contact h2 {
     width: 100%;
@@ -139,7 +144,7 @@
 
 /********************  md, lg, xl, xxl device  ********************/
 /******************************************************************/
-@media (min-width: 990px) {
+@media (min-width: 1065px) {
   /*******  logo & navigation  *******/
   nav {
     display: block !important;
