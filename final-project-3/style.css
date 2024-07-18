@@ -498,14 +498,10 @@ nav li::first-letter {
   align-items: flex-start;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: calc(2 * var(--my-gap));
+  gap: calc(3 * var(--my-gap));
 
   margin-top: calc(3 * var(--my-gap));
   margin-bottom: calc(2 * var(--my-gap));
-}
-
-.all-tables .table-container {
-  /* border: 1px solid red; */
 }
 
 .all-tables .table-container .table-title {
@@ -514,7 +510,7 @@ nav li::first-letter {
 
 .all-tables .table-container .note {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 350;
   text-transform: uppercase;
   margin-top: calc(var(--my-gap) * -1.5);
@@ -545,9 +541,9 @@ nav li::first-letter {
 }
 
 .all-tables table .team-attack {
-  /* background-color: var(--main-color); */
-  background-color: orangered;
+  background-color: var(--main-color);
   color: var(--my-white);
+  font-weight: 700;
 }
 
 /********************  contact  ********************/
