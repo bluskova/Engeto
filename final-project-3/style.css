@@ -364,20 +364,6 @@ nav li::first-letter {
 /********************  photo gallery  ********************/
 #gallery {
   background-color: var(--bg-col);
-  position: relative;
-}
-
-/* background image with opacity => use pseudo-class before */
-#gallery::before {
-  /* content: "";
-  background-image: url("./img/hero-img/peter-glaser-UVWULib2OHM-unsplash-black-and-white.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.7; */
 }
 
 #gallery h2 {
@@ -386,6 +372,14 @@ nav li::first-letter {
   margin-right: auto;
   background-color: var(--my-white);
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#gallery h3 {
+  text-align: center;
+  border-bottom: 5px solid var(--main-color);
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 .gallery-container {
