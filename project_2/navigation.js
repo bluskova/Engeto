@@ -44,7 +44,7 @@ document.body.addEventListener("click", (event) => {
 
 // close the navigation after click 'Escape'
 window.addEventListener("keydown", (event) => {
-  if (event.code === "Escape") {
+  if (event.code === "Escape" && !hiddenNav) {
     closeNav();
   }
 });
