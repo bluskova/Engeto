@@ -20,6 +20,8 @@
 
   --headings-font-family: "Fira Sans", sans-serif;
   --text-font-family: "Open Sans", sans-serif;
+
+  --bg-img: url("../img/background/zahlavi4.jpg");
 }
 
 [color-theme="blue-mode"] {
@@ -27,4 +29,6 @@
   --main-color-transparent: var(--my-blue-transparent);
   --text-bg-color: rgb(231, 221, 221);
   --switcher-color: rgb(156, 156, 156);
+
+  --bg-img: url("../img/background/foto.jpg");
 }

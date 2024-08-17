@@ -48,14 +48,56 @@
   margin-bottom: 20px;
 }
 
-#for-parents .download {
+#for-parents #dokumenty .download {
   max-width: 400px;
 }
 
-#for-parents .download th {
+#for-parents #dokumenty th {
   background-color: var(--text-bg-color);
 }
 
-#for-parents .download tr:hover {
+#for-parents #dokumenty tr:hover,
+#for-parents #prihlaseni tr:hover {
   background-color: var(--text-bg-color);
+}
+
+#for-parents #prihlaseni #login-form input {
+  font-family: var(--text-font-family);
+  letter-spacing: 0.5px;
+  font-size: 16px;
+}
+
+#for-parents #prihlaseni #login-form input[type="text"],
+#for-parents #prihlaseni #login-form input[type="password"] {
+  background-color: var(--text-bg-color);
+  width: 80%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid var(--main-color);
+}
+
+#for-parents #prihlaseni #login-form input[type="submit"] {
+  transition: 0.4s;
+  border: 2px solid var(--main-color);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-family: var(--text-font-family);
+  text-transform: uppercase;
+  padding: 7px 15px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin: 10px;
+}
+
+#for-parents #prihlaseni #login-form input[type="submit"]:hover {
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+#for-parents #prihlaseni #login-form input[type="text"]:focus,
+#for-parents #prihlaseni #login-form input[type="password"]:focus {
+  outline: none;
+  border-bottom: 2px solid var(--text-color);
+  background-color: var(--main-color-transparent);
 }
