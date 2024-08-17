@@ -104,8 +104,15 @@
 
 #for-parents #prihlaseni #login-form #psw-text {
   text-transform: uppercase;
-  color: red;
   display: block;
   height: 40px;
   line-height: 40px;
+}
+
+#for-parents .red-color {
+  color: red;
+}
+
+#for-parents .black-color {
+  color: var(--text-color);
 }

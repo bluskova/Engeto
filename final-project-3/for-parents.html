@@ -245,7 +245,8 @@
             <section id="prihlaseni" class="anchor">
               <h3>Přihlášení</h3>
               <p class="text">
-                Zadejte, prosím, své uživatelské jméno a 2x stejné heslo.
+                Zadejte, prosím, své uživatelské jméno a 2x stejné heslo (3-20
+                znaků).
               </p>
               <form id="login-form">
                 <table>
@@ -257,6 +258,9 @@
                         id="username"
                         name="username"
                         autocomplete="username"
+                        minlength="3"
+                        maxlength="20"
+                        required
                       />
                     </td>
                   </tr>
@@ -266,8 +270,12 @@
                       <input
                         type="password"
                         id="psw-1"
+                        class="psw-input"
                         name="psw-1"
                         autocomplete="current-password"
+                        minlength="3"
+                        maxlength="20"
+                        required
                       />
                     </td>
                   </tr>
@@ -277,14 +285,18 @@
                       <input
                         type="password"
                         id="psw-2"
+                        class="psw-input"
                         name="psw-2"
                         autocomplete="current-password"
+                        minlength="3"
+                        maxlength="20"
+                        required
                       />
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
-                      <div id="psw-text">Hesla nejsou shodna</div>
+                      <div id="psw-text"></div>
                       <input type="submit" value="Přihlásit" />
                     </td>
                   </tr>
