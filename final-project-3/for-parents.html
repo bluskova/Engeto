@@ -245,17 +245,17 @@
             <section id="prihlaseni" class="anchor">
               <h3>Přihlášení</h3>
               <p class="text">
-                Zadejte, prosím, uživatelské jméno a 2x stejné heslo.
+                Zadejte, prosím, své uživatelské jméno a 2x stejné heslo.
               </p>
               <form id="login-form">
                 <table>
                   <tr>
-                    <td><label for="name">Uživatelské jméno</label></td>
+                    <td><label for="username">Uživatelské jméno</label></td>
                     <td>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="username"
+                        name="username"
                         autocomplete="username"
                       />
                     </td>
@@ -267,7 +267,7 @@
                         type="password"
                         id="psw-1"
                         name="psw-1"
-                        autocomplete="new-password"
+                        autocomplete="current-password"
                       />
                     </td>
                   </tr>
@@ -278,12 +278,13 @@
                         type="password"
                         id="psw-2"
                         name="psw-2"
-                        autocomplete="new-password"
+                        autocomplete="current-password"
                       />
                     </td>
                   </tr>
                   <tr>
                     <td colspan="2">
+                      <div id="psw-text">Hesla nejsou shodna</div>
                       <input type="submit" value="Přihlásit" />
                     </td>
                   </tr>
@@ -440,5 +441,6 @@
 
     <!-------  javascript  ------->
     <script src="./js/main.js"></script>
+    <script src="./js/form-login.js"></script>
   </body>
 </html>

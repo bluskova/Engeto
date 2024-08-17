@@ -8,7 +8,7 @@
 
 #for-parents th,
 #for-parents td {
-  border: 1px solid #ddd;
+  border: 1px solid var(--table-border-color);
   font-size: 14px;
   font-family: var(--text-font-family);
   padding: 12px;
@@ -100,4 +100,12 @@
   outline: none;
   border-bottom: 2px solid var(--text-color);
   background-color: var(--main-color-transparent);
+}
+
+#for-parents #prihlaseni #login-form #psw-text {
+  text-transform: uppercase;
+  color: red;
+  display: block;
+  height: 40px;
+  line-height: 40px;
 }
