@@ -1,3 +1,5 @@
+mybutton = document.getElementById("scrollTopBtn");
+
 const loadHtmlFragment = (htmlFile, whereToInsert, jsFile = null) => {
   const targetElement = document.getElementById(whereToInsert);
 
@@ -21,6 +23,7 @@ const loadHtmlFragment = (htmlFile, whereToInsert, jsFile = null) => {
     .catch((error) => console.error(`Error loading ${htmlFile}:`, error));
 };
 
+// load header, footer (html and js), introduction-text and harmonogram-2024 (if is necessary)
 document.addEventListener("DOMContentLoaded", () => {
   loadHtmlFragment("header.html", "header", "header.js");
   loadHtmlFragment("footer.html", "footer", "footer.js");
@@ -32,4 +35,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("harmonogram-table-2024")) {
     loadHtmlFragment("harmonogram-2024.html", "harmonogram-table-2024");
   }
+});
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.addEventListener("scroll", () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+});
+
+mybutton.addEventListener("click", () => {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
