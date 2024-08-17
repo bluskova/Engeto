@@ -134,7 +134,7 @@ header .switch-mode .switcher-description .dot {
   height: 12px;
   width: 12px;
   border: 1px solid var(--text-color);
-  background-color: rgb(233, 200, 25);
+  background-color: var(--my-yellow);
   border-radius: 50%;
   display: inline-block;
 }
@@ -142,7 +142,7 @@ header .switch-mode .switcher-description .dot {
 header .switch-mode .switcher-description .blue-circle {
   height: 13px;
   width: 13px;
-  background-color: rgb(26, 167, 232);
+  background-color: var(--my-blue);
 }
 
 /* The switch - the box around the slider */

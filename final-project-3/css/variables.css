@@ -1,24 +1,30 @@
 :root {
-  --main-color: rgb(233, 200, 25);
-  --main-color-transparent: rgb(233, 200, 25, 0.9);
+  --my-white: rgb(255, 255, 255);
+  --my-yellow: rgb(233, 200, 25);
+  --my-yellow-transparent: rgb(233, 200, 25, 0.9);
+  --my-blue: rgb(26, 167, 232);
+  --my-blue-transparent: rgb(26, 167, 232, 0.9);
+
+  --main-color: var(--my-yellow);
+  --main-color-transparent: var(--my-yellow-transparent);
   --text-color: rgb(0, 0, 0);
   --text-bg-color: rgb(236, 235, 235);
   --switcher-color: rgb(76, 76, 76);
   --link-color: rgb(108, 108, 108);
-  --my-white: rgb(255, 255, 255);
+
   --switch-box-height: 25px;
   --header-height: 60px;
   --footer-height: 650px;
-  --headings-font-family: "Fira Sans", sans-serif;
-  --text-font-family: "Open Sans", sans-serif;
   --my-gap: 20px;
   --border-radius: 3px;
+
+  --headings-font-family: "Fira Sans", sans-serif;
+  --text-font-family: "Open Sans", sans-serif;
 }
 
 [data-theme="blue-mode"] {
-  --main-color: rgb(26, 167, 232);
-  --main-color-transparent: rgb(26, 167, 232, 0.9);
-  --text-color: rgb(0, 0, 0);
+  --main-color: var(--my-blue);
+  --main-color-transparent: var(--my-blue-transparent);
   --text-bg-color: rgb(231, 221, 221);
   --switcher-color: rgb(156, 156, 156);
 }
