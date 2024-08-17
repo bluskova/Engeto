@@ -23,7 +23,6 @@ const loadHtmlFragment = (htmlFile, whereToInsert, jsFile = null) => {
     .catch((error) => console.error(`Error loading ${htmlFile}:`, error));
 };
 
-// load header, footer (html and js), introduction-text and harmonogram-2024 (if is necessary)
 document.addEventListener("DOMContentLoaded", () => {
   loadHtmlFragment("header.html", "header", "header.js");
   loadHtmlFragment("footer.html", "footer", "footer.js");
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.addEventListener("scroll", () => {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
@@ -47,6 +45,6 @@ window.addEventListener("scroll", () => {
 });
 
 mybutton.addEventListener("click", () => {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
