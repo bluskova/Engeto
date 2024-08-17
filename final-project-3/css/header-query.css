@@ -45,6 +45,7 @@
 
   header .switch-mode {
     width: 100%;
+    justify-content: left;
   }
 
   header {

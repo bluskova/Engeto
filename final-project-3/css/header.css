@@ -1,3 +1,7 @@
+header .nav-hamburger-container {
+  border-top: 1px solid var(--table-border-color);
+}
+
 header .nav-hamburger {
   display: flex;
   flex-direction: row;
@@ -105,7 +109,7 @@ header .nav-list .nav-list-li:hover .nav-dropdown {
 header .switch-mode {
   background-color: var(--background-color);
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: var(--switch-box-height);
@@ -125,23 +129,22 @@ header .switch-mode .switcher-description p {
   margin-right: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 350;
+  color: var(--switch-mode-color);
   color: var(--text-color);
 }
 
 header .switch-mode .switcher-description .dot {
   height: 12px;
   width: 12px;
-  border: 1px solid var(--text-color);
+  border: 1px solid var(--switch-mode-color);
   background-color: var(--my-yellow);
   border-radius: 50%;
   display: inline-block;
 }
 
 header .switch-mode .switcher-description .blue-circle {
-  height: 13px;
-  width: 13px;
   background-color: var(--my-blue);
 }
 
@@ -168,7 +171,7 @@ header .switch-mode .slider {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: gray;
+  background-color: var(--switch-mode-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -180,17 +183,17 @@ header .switch-mode .slider:before {
   width: 14px;
   left: 2px;
   bottom: 2px;
-  background-color: white;
+  background-color: var(--text-bg-color);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 header .switch-mode input:checked + .slider {
-  background-color: gray;
+  background-color: var(--switch-mode-color);
 }
 
 header .switch-mode input:focus + .slider {
-  box-shadow: 0 0 1px gray;
+  box-shadow: 0 0 1px var(--switch-mode-color);
 }
 
 header .switch-mode input:checked + .slider:before {
