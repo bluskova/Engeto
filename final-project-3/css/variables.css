@@ -22,7 +22,7 @@
   --text-font-family: "Open Sans", sans-serif;
 }
 
-[data-theme="blue-mode"] {
+[color-theme="blue-mode"] {
   --main-color: var(--my-blue);
   --main-color-transparent: var(--my-blue-transparent);
   --text-bg-color: rgb(231, 221, 221);

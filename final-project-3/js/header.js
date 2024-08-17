@@ -25,11 +25,29 @@ const closeNav = () => {
   hiddenNav = true;
 };
 
+// function which check color-theme from local storage
+const checkColorTheme = () => {
+  const colorTheme = localStorage.getItem("colorThemeLS");
+
+  if (colorTheme === "yellow-mode") {
+    switcher.checked = false;
+    document.documentElement.setAttribute("color-theme", "yellow-mode");
+  }
+
+  if (colorTheme === "blue-mode") {
+    switcher.checked = true;
+    document.documentElement.setAttribute("color-theme", "blue-mode");
+  }
+};
+
+// function which change color-theme
 const switchTheme = (event) => {
   if (event.target.checked) {
-    document.documentElement.setAttribute("data-theme", "blue-mode");
+    document.documentElement.setAttribute("color-theme", "blue-mode");
+    localStorage.setItem("colorThemeLS", "blue-mode");
   } else {
-    document.documentElement.setAttribute("data-theme", "yellow-mode");
+    document.documentElement.setAttribute("color-theme", "yellow-mode");
+    localStorage.setItem("colorThemeLS", "yellow-mode");
   }
 };
 
@@ -55,6 +73,9 @@ window.addEventListener("keydown", (event) => {
     closeNav();
   }
 });
+
+// check color theme from local storage
+checkColorTheme();
 
 // switch yellow / blue mode
 switcher.addEventListener("change", switchTheme);
