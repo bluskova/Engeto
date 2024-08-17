@@ -1,5 +1,6 @@
 const menuIcon = document.getElementById("menu-icon");
 const navigation = document.querySelector("header nav");
+const switcher = document.querySelector(".switch input");
 
 // inicialization
 let hiddenNav = true;
@@ -24,6 +25,14 @@ const closeNav = () => {
   hiddenNav = true;
 };
 
+const switchTheme = (event) => {
+  if (event.target.checked) {
+    document.documentElement.setAttribute("data-theme", "blue-mode");
+  } else {
+    document.documentElement.setAttribute("data-theme", "yellow-mode");
+  }
+};
+
 // open and close navigation
 menuIcon.addEventListener("click", () => {
   if (hiddenNav) {
@@ -46,3 +55,6 @@ window.addEventListener("keydown", (event) => {
     closeNav();
   }
 });
+
+// switch yellow / blue mode
+switcher.addEventListener("change", switchTheme);
