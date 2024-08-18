@@ -1,3 +1,4 @@
+import commonFce from "./functions/common-fce.js";
 import formFce from "./functions/form-login-fce.js";
 
 const name = document.getElementById("username");
@@ -13,14 +14,10 @@ pswInputs.forEach((oneInput) => {
 
     if (psw1Value === psw2Value) {
       formFce.insertContent(pswText, "Hesla jsou shodná");
-
-      formFce.removeClass(pswText, "red-color");
-      formFce.addClass(pswText, "black-color");
+      commonFce.replaceClass(pswText, "red-color", "black-color");
     } else {
       formFce.insertContent(pswText, "Hesla nejsou shodná");
-
-      formFce.removeClass(pswText, "black-color");
-      formFce.addClass(pswText, "red-color");
+      commonFce.replaceClass(pswText, "black-color", "red-color");
     }
 
     formFce.htmlTagCleaner(psw1Value, psw2Value, pswText);
