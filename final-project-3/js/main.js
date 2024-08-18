@@ -1,50 +1,20 @@
-mybutton = document.getElementById("scrollTopBtn");
-
-const loadHtmlFragment = (htmlFile, whereToInsert, jsFile = null) => {
-  const targetElement = document.getElementById(whereToInsert);
-
-  if (!targetElement) {
-    console.error(`Element with ID ${whereToInsert} not found.`);
-    return;
-  }
-
-  fetch(`./html-fragment/${htmlFile}`)
-    .then((response) => response.text())
-    .then((data) => {
-      targetElement.innerHTML = data;
-
-      if (jsFile) {
-        const script = document.createElement("script");
-        script.src = `./js/${jsFile}`;
-        script.async = true;
-        document.body.appendChild(script);
-      }
-    })
-    .catch((error) => console.error(`Error loading ${htmlFile}:`, error));
-};
+import insertHtmlFce from "./functions/insert-html-fce.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadHtmlFragment("header.html", "header", "header.js");
-  loadHtmlFragment("footer.html", "footer", "footer.js");
+  insertHtmlFce.loadHtmlFragment("header.html", "header", "header.js");
+  insertHtmlFce.loadHtmlFragment("footer.html", "footer", "footer.js");
 
   if (document.getElementById("introduction-text")) {
-    loadHtmlFragment("introduction-text.html", "introduction-text");
+    insertHtmlFce.loadHtmlFragment(
+      "introduction-text.html",
+      "introduction-text"
+    );
   }
 
   if (document.getElementById("harmonogram-table-2024")) {
-    loadHtmlFragment("harmonogram-2024.html", "harmonogram-table-2024");
+    insertHtmlFce.loadHtmlFragment(
+      "harmonogram-2024.html",
+      "harmonogram-table-2024"
+    );
   }
-});
-
-window.addEventListener("scroll", () => {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-});
-
-mybutton.addEventListener("click", () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
 });
