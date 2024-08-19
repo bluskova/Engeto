@@ -1,3 +1,10 @@
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Poznamka:
+// Chci importovat a pouzit funkci funkci 'replaceClass'.
+// Po pridani radku 'import commonFce from "./functions/common-fce.js";' a zavolani skriptu jako 'type="module"' skript prestane fungovat.
+// Vim v cem je problem, ale neumim to ted opravit. Takhle je kod funkci, ale urcite to neni idealni reseni.
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 // import commonFce from "./functions/common-fce.js";
 
 mybutton = document.getElementById("scrollTopBtn");
